@@ -8,11 +8,11 @@
 | Oscar David Torres Sánchez | o.torress@uniandes.edu.co |
 
 ## Requisitos 
-Cypress
-Node v20.12.2
-kraken-node
-Ghost v5.100.0
-Tener un usuario registrado en el aplicativo ghost
+1. Cypress
+2. Node v20.12.2
+3. kraken-node
+4. Ghost v5.100.0
+5. Tener un usuario registrado en el aplicativo ghost
 
 ## Instalación de Kraken
 1. Clona el repositorio donde se encuentran los escenarios de prueba
