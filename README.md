@@ -51,3 +51,29 @@ Despues de seguir los pasos anterios para la instalación de Kraken, estamos lis
    <img width="1459" alt="Screenshot 2024-11-09 at 11 34 07 PM" src="https://github.com/user-attachments/assets/e55ded91-fed9-49c5-9203-3ad90186db55">
    
    <img width="1468" alt="Screenshot 2024-11-09 at 11 34 42 PM" src="https://github.com/user-attachments/assets/3606c7c0-e1bf-4da3-8786-bb4f2965fb8f">
+
+
+## Instalacion de Cypress
+1. Clona el repositorio donde se encuentran los escenarios de prueba
+   
+   ```bash
+   git clone https://github.com/danisanchezag2/e2e_test_kraken_cypress.git
+   
+2. Dirígete al directorio test-cypress/
+   
+   ```bash
+   cd test-cypress/
+   
+3. Instala las dependencias necesarias usando el comando npm install
+   
+   ```bash
+   npm install
+   
+4. Ejecuta Cypress en modo interactivo
+   
+   ```bash
+   npx cypress open
+5. ejecuta Cypress en modo headless
+     ```bash
+   npx cypress run
+

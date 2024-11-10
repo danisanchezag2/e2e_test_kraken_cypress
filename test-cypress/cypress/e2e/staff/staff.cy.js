@@ -9,7 +9,7 @@ describe('Given I am logged into Ghost', function() {
     loginPage.login();  // "Given I am logged into Ghost"
   });
 
-  it('Create a new staff user', function() {
+  it('EP-07 Create a new staff user', function() {
     // When I navigate to the settings page
     staffPage.navigateSettings();
     // And I click on the staff section

@@ -9,7 +9,7 @@ describe('Given I am logged into Ghost', function() {
     loginPage.login();  // "Given I am logged into Ghost"
   });
 
-  it('Create a new page', function() {
+  it('EP-09 Create a new page', function() {
     const randomTitle = faker.lorem.sentence();
     const randomDescription = faker.lorem.paragraph();
     // When I navigate to the pages page
@@ -28,7 +28,7 @@ describe('Given I am logged into Ghost', function() {
     pagesPage.verifyPageExists(randomTitle);
   });
 
-  it('Delete a page', function() {
+  it('EP-10 Delete a page', function() {
     // When I navigate to the pages page
     pagesPage.navigateToPages();
     // And I click the first page of the list

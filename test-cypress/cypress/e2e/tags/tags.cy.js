@@ -9,7 +9,7 @@ describe('I am logged into Ghost', function() {
     loginPage.login();  // "Given I am logged into Ghost"
   });
 
-  it('Crear un nuevo tag desde el panel de Tags', function() {
+  it('EP-01 Create a new tag with name and description', function() {
     const randomTagName = faker.person.lastName();
     const randomTagDescription = faker.lorem.paragraph(1);
 
@@ -32,7 +32,7 @@ describe('I am logged into Ghost', function() {
     tagsPage.verifyTagExists(randomTagName);
   });
 
-  it('Create a new tag with more than 500 chars in name and description inputs', function() {
+  it('EP-02 Create a new tag with more than 500 chars in name and description inputs', function() {
     const randomTagName = faker.person.firstName();
     const longTagDescription = faker.string.alpha(508);
 
