@@ -1,10 +1,18 @@
 # Pruebas E2E para Ghost con Kraken y Cypress
+
 ## Integrantes
 
 | Nombre             | Correo                          |
 | ------------------ | ------------------------------- |
 | Daniela Sánchez Agudelo | d.sancheza2@uniandes.edu.co  |
 | Oscar David Torres Sánchez | o.torress@uniandes.edu.co |
+
+## Requisitos 
+Cypress
+Node v20.12.2
+kraken-node
+Ghost v5.100.0
+Tener un usuario registrado en el aplicativo ghost
 
 ## Instalación de Kraken
 1. Clona el repositorio donde se encuentran los escenarios de prueba
@@ -72,8 +80,15 @@ Despues de seguir los pasos anterios para la instalación de Kraken, estamos lis
 4. Ejecuta Cypress en modo interactivo
    
    ```bash
-   npx cypress open
-5. ejecuta Cypress en modo headless
-     ```bash
-   npx cypress run
+   npm run start
+   4.1. O ejecuta Cypress en modo headless
+        ```bash
+      npm run test
+
+## Ejecucion de Cypress Interfaz
+Cuando se corre npm run test, estaremos interactuando con la interfaz de cypress
+1. Al abrir la interfaz Hacer click en Add Project y buscar la carpeta cypress de este repositorio, donde esta ubicado el archivo cypress.config.js.
+2. Seleccionar las pruebas e2e ![image](https://github.com/user-attachments/assets/8d8e1923-345e-4d78-87a9-be14f720da08)
+3. Seleccionar un navegador para la ejecución y hacer click en start ![image](https://github.com/user-attachments/assets/f1d45e5e-e4b1-4ae1-be38-2933382b9a55)
+4. Ya allí podremos seleccionar las pruebas y ver su ejecución ![image](https://github.com/user-attachments/assets/0da7db4c-917f-46d2-b235-8a29fb5bd2a4)
 
