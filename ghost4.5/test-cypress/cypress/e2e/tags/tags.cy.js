@@ -11,7 +11,7 @@ describe('I am logged into Ghost', function() {
   });
 
   it('EP-01 Create a new tag with name and description', function() {
-    const randomTagName = faker.person.lastName();
+    const randomTagName = faker.person.firstName();
     const randomTagDescription = faker.lorem.paragraph(1);
 
     // When I go to the tags section

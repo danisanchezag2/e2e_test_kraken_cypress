@@ -32,6 +32,8 @@ class PagesPage {
         cy.get('[data-test-psm-trigger]').click();
     }
     clickDeleteButton() {
+        cy.get('.settings-menu-delete-button > .gh-btn > span').scrollIntoView();
+        cy.wait(2000);
         cy.get('[data-test-button="delete-post"]').click();
     }
     clickConfirmDeleteButton() {

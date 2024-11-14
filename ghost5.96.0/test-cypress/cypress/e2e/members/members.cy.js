@@ -17,12 +17,12 @@ describe('I am logged into Ghost', function() {
     membersPage.clickNewMemberButton();
     screenshot('Members','EP-03 Create a new member with name and email', 'And I click the new member button');
     // And I fill in the member name and email and save
-    const { randomName } = membersPage.fillMemberDetailsAndSave();
+    const { randomEmail } = membersPage.fillMemberDetailsAndSave();
     screenshot('Members','EP-03 Create a new member with name and email', 'And I fill in the member name and email and save');
     // And I come back to the members page
     membersPage.navigateToMembers();
     // Then I should see the member in the list
-    membersPage.verifyMemberExists(randomName);
+    membersPage.verifyMemberExists(randomEmail);
   });
 
   it('EP-04 Edit name and email of an existing member', function() {
@@ -35,11 +35,11 @@ describe('I am logged into Ghost', function() {
     membersPage.clickFirstMember();
     screenshot('Members','EP-04 Edit name and email of an existing member', 'And I click on the first member of the list');
     //  And I edit the member name and email and save
-    const { randomName } = membersPage.fillMemberDetailsAndSave();
+    const { randomEmail } = membersPage.fillMemberDetailsAndSave();
     screenshot('Members','EP-04 Edit name and email of an existing member', 'And I fill in the member name and email and save');
     //  And I come back to the members page
     membersPage.navigateToMembers();
     //  Then I should see the member in the list
-    membersPage.verifyMemberExists(randomName);
+    membersPage.verifyMemberExists(randomEmail);
   });
 });

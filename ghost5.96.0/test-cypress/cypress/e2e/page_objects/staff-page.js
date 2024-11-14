@@ -14,6 +14,8 @@ class StaffPage {
         cy.get('#author').click();
     }
     clickSendInvitation() {
+        cy.get('[data-testid="invite-user-modal"] > .justify-between').scrollIntoView();
+        cy.wait(2000);
         cy.get('[data-testid="invite-user-modal"] div.gap-3 button').click();
     }
     verifyStaffExists(email) {

@@ -14,7 +14,7 @@ class MembersPage {
     const randomName = faker.internet.userName();
     const randomEmail = faker.internet.email();
     cy.get('[data-test-input="member-name"]').type(randomName);
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get('[data-test-input="member-email"]').clear().type(randomEmail);
     cy.wait(1000);
     cy.get('[data-test-button="save"]').click();
@@ -22,8 +22,8 @@ class MembersPage {
     return { randomName, randomEmail };
   }
 
-  verifyMemberExists(name) {
-    cy.get('[data-test-list="members-list-item"]').contains(name).should('exist');
+  verifyMemberExists(email) {
+    cy.get('[data-test-list="members-list-item"]').contains(email).should('exist');
   }
 
   clickFirstMember() {
