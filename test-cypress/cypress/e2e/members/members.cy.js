@@ -5,7 +5,7 @@ describe('I am logged into Ghost', function() {
   const loginPage = new LoginPage();
   const membersPage = new MembersPage();
 
-  it('Crear miembro con nombre y correo', function() {
+  it('EP-03 Create a new member with name and email', function() {
      // Given I am logged into Ghost
      loginPage.login();
     //  When I navigate to the members page
@@ -20,7 +20,7 @@ describe('I am logged into Ghost', function() {
     membersPage.verifyMemberExists(randomName);
   });
 
-  it('Editar miembro con nombre y correo', function() {
+  it('EP-04 Edit name and email of an existing member', function() {
      // Given I am logged into Ghost
      loginPage.login();
     //  When I navigate to the members page
