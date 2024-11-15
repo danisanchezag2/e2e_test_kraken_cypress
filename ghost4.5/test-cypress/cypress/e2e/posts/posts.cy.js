@@ -23,12 +23,8 @@ describe('Given I am logged into Ghost', function() {
     const randomDescription = faker.lorem.paragraph();
     postsPage.fillPostDetails(randomTitle, randomDescription);
     postsPage.clickPublishButton();
-    screenshot('Post','EP-05 Create a post', 'And I click the publish button');
-    // And I click on the button Continue, final review
-    postsPage.clickContinuePublish();
-    screenshot('Post','EP-05 Create a post', 'I click on the button Continue, final review');
-    // And I click on the button Publish post, right now
-    postsPage.clickConfirmPublish();
+     // And I click on the button Continue, final review
+     postsPage.clickContinuePublish();
     screenshot('Post','EP-05 Create a post', 'I click on the button Publish post, right now');
     // Then I should see the confirmation message
     postsPage.verifyPostExists(randomTitle);

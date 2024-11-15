@@ -29,8 +29,6 @@ describe('Given I am logged into Ghost', function() {
     pagesPage.clickContinueButton();
     screenshot('Pages','EP-09 Create a new page', 'And I click on the button Continue, final review in the new page');
     // And I click on the button Publish, right now in the new page
-    pagesPage.clickPublishPageButton();
-    screenshot('Pages','EP-09 Create a new page', 'And I click on the button Publish, right now in the new page');
     // Then  I should see the confirmation message in the Pages page
     pagesPage.verifyPageExists(randomTitle);
   });

@@ -1,46 +1,47 @@
 class PagesPage {
     navigateToPages() {
-        cy.get('[data-test-nav="pages"]').click();
+        cy.get('[href="#/pages/"]').click();
       }
     clickNewPageButton() {
         cy.get('[href="#/editor/page/"]').click();
     }
     fillPageTitleAndDescription(title, description) {
         cy.get('.gh-editor-title').type(title);
-        cy.get('[data-secondary-instance="false"] > .koenig-lexical > [data-kg="editor"] > .kg-prose > p').type(description);
+        cy.get('.koenig-editor__editor').click().type(description);
     }
 
     clickPublishButton() {
-        cy.get('.gh-editor-header > .gh-editor-publish-buttons > .darkgrey > span').click();
+        cy.get('.gh-publishmenu-trigger').click();
     }
 
     clickContinueButton() {
-        cy.get('[data-test-button="continue"]').click();
+        cy.get('.gh-publishmenu-button').click();
+        cy.wait(3000);
     }
 
     clickPublishPageButton() {
-        cy.get('[data-test-button="confirm-publish"]').click();
+        cy.get('.gh-editor-back-button ').click();
     }
 
     verifyPageExists(title) {
-        cy.get('[data-test-publish-flow="complete"]').contains(title).should('exist');
+        cy.get('.gh-notification-content').contains("Published").should('exist');
     }
     clickFirstPage() {
         cy.get('.gh-posts-list-item').first().click();
     }
     clickSettingsButton() {
-        cy.get('[data-test-psm-trigger]').click();
+        cy.get('[title="Settings"]').click();
     }
     clickDeleteButton() {
-        cy.get('.settings-menu-delete-button > .gh-btn > span').scrollIntoView();
+        cy.get('.settings-menu-delete-button').scrollIntoView();
         cy.wait(2000);
-        cy.get('[data-test-button="delete-post"]').click();
+        cy.get('.settings-menu-delete-button').click();
     }
     clickConfirmDeleteButton() {
-        cy.get('[data-test-button="delete-post-confirm"]').click();
+        cy.get('.gh-btn-red').click();
     }
     verifyRedirectionToPagesPage() {
-        cy.get('[data-test-screen-title]').contains('Pages').should('exist');        
+        cy.get('.active').contains('Pages').should('exist');        
     }
 }
 export default PagesPage;

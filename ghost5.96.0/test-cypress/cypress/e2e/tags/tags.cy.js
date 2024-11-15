@@ -16,19 +16,19 @@ describe('I am logged into Ghost', function() {
 
     // When I go to the tags section
     tagsPage.navigateToTags();
-    screenshot('Tags','EP-01 Create a new tag with name and description', 'When I go to the tags section');
+    screenshot('Tags','EP-01 Create a new tag with name and description', 'Step-1');
 
     // And I click on the new tag button
     tagsPage.clickNewTagButton();
-    screenshot('Tags','EP-01 Create a new tag with name and description', 'And I click on the new tag button');
+    screenshot('Tags','EP-01 Create a new tag with name and description', 'Step-2');
 
     // And I fill the tag name and description
     tagsPage.fillTagNameAndDescription(randomTagName, randomTagDescription);
-    screenshot('Tags','EP-01 Create a new tag with name and description', 'And I fill the tag name and description');
+    screenshot('Tags','EP-01 Create a new tag with name and description', 'Step-3');
 
     // And I click on the save button
     tagsPage.saveTag();
-    screenshot('Tags','EP-01 Create a new tag with name and description', 'And I click on the save button');
+    screenshot('Tags','EP-01 Create a new tag with name and description', 'Step-4');
 
     // And I come back to the tags page
     tagsPage.navigateToTags();
@@ -43,21 +43,21 @@ describe('I am logged into Ghost', function() {
 
     // When I go to the tags section
     tagsPage.navigateToTags();
-    screenshot('Tags','EP-02 Create a new tag with more than 500 chars in name and description inputs', 'When I go to the tags section');
+    screenshot('Tags','EP-02 Create a new tag with more than 500 chars', 'Step-1');
 
     // And I click on the new tag button
     tagsPage.clickNewTagButton();
-    screenshot('Tags','EP-02 Create a new tag with more than 500 chars in name and description inputs', 'And I click on the new tag button');
+    screenshot('Tags','EP-02 Create a new tag with more than 500 chars', 'Step-2');
 
     // And I fill the tag name and description with more than 500 chars
     tagsPage.fillTagNameAndDescription(randomTagName, longTagDescription);
 
     // And I click on the save button
     tagsPage.saveTag();
-    screenshot('Tags','EP-02 Create a new tag with more than 500 chars in name and description inputs', 'And I click on the save button');
+    screenshot('Tags','EP-02 Create a new tag with more than 500 chars', 'Step-3');
 
     // Then I should see an error message indicating the input exceeds the character limit
     tagsPage.verifyErrorMessage('Description cannot be longer than 500 characters.');
-    screenshot('Tags','EP-02 Create a new tag with more than 500 chars in name and description inputs', 'Then I should see an error message indicating the input exceeds the character limit');
+    screenshot('Tags','EP-02 Create a new tag with more than 500 chars', 'Step-4');
   });
 });

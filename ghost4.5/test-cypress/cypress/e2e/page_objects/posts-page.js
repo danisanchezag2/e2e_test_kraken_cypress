@@ -1,47 +1,50 @@
 class PostsPage {
     navigateToPosts() {
-        cy.get('[data-test-nav="posts"]').click();
+        cy.get('[href="#/posts/"]').first().click();
       }
     clickNewPostButton() {
-        cy.get('[data-test-new-post-button]').click();
+        cy.get('[href="#/editor/post/"]').first().click();
     }
     fillPostDetails(title, content) {
         cy.get('.gh-editor-title').type(title);
-        cy.get('[data-secondary-instance="false"] > .koenig-lexical > [data-kg="editor"] > .kg-prose > p').type(content);
+        cy.get('.koenig-editor__editor').click().type(content);
+        cy.wait(10000);
     }
     clickPublishButton() {
-        cy.get('.gh-editor-header > .gh-editor-publish-buttons [data-test-button="publish-flow"]').click();
-        cy.wait(2000);
+        cy.get('.gh-publishmenu-trigger').click();
+        cy.wait(4000);
     }
     
     clickContinuePublish() {
-        cy.get('[data-test-button="continue"]').click();
-        cy.wait(1000);
+        cy.get('.gh-publishmenu-button').click();
+       cy.wait(2000);
     }
+
     clickConfirmPublish(){
-        cy.get('[data-test-button="confirm-publish"]').click();
+        cy.get('.gh-publishmenu-button').click();
         cy.wait(1000);
     }
+ 
     verifyPostExists(title) {
-        cy.get('[data-test-publish-flow="complete"]').contains(title).should('exist');
+        cy.get('.gh-notification-content').contains("Published").should('exist');
     }
     clickFirstPost() {
         cy.get('.gh-posts-list-item').first().click();
     }
     clickSettingsButton() {
-        cy.get('[data-test-psm-trigger]').click();
+        cy.get('[title="Settings"]').click();
     }
     clickDeleteButton() {
-        cy.get('.settings-menu-delete-button > .gh-btn > span').scrollIntoView();
+        cy.get('.settings-menu-delete-button').scrollIntoView();
         cy.wait(2000);
-        cy.get('[data-test-button="delete-post"]').click();
+        cy.get('.settings-menu-delete-button').click();
     }
     clickConfirmDeleteButton() {
-        cy.get('[data-test-button="delete-post-confirm"]').click();
+        cy.get('.gh-btn-red').click();
         cy.wait(1000);
     }
     verifyRedirectionToPostsPage() {
-        cy.get('[data-test-screen-title]').contains('Posts').should('exist');        
+        cy.get('.active').contains('Posts').should('exist');        
     }
 }
 export default PostsPage;

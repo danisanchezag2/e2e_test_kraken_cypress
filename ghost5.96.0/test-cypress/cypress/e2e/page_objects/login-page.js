@@ -1,6 +1,6 @@
 class LoginPage {
     login() {
-        cy.visit('http://localhost:2368/ghost/#/signin');
+        cy.visit('http://localhost:2370/ghost/#/signin');
         cy.wait(1000);
         cy.get('#identification').type("daniela.sancheza@outlook.com");
         cy.wait(2);

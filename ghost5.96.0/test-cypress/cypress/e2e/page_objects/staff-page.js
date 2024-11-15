@@ -1,6 +1,8 @@
 
 class StaffPage {
     navigateSettings() {
+        cy.get('[data-test-nav="settings"]').scrollIntoView();
+        cy.wait(2000);
         cy.get('[data-test-nav="settings"]').click();
     }
     clickStaff() {
