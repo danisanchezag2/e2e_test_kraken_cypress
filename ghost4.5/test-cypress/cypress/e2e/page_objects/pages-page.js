@@ -36,9 +36,11 @@ class PagesPage {
         cy.get('.settings-menu-delete-button').scrollIntoView();
         cy.wait(2000);
         cy.get('.settings-menu-delete-button').click();
+        cy.wait(1000);
     }
     clickConfirmDeleteButton() {
         cy.get('.gh-btn-red').click();
+        cy.wait(1000);
     }
     verifyRedirectionToPagesPage() {
         cy.get('.active').contains('Pages').should('exist');        
