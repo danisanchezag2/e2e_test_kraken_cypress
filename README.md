@@ -1,4 +1,4 @@
-# Pruebas E2E para Ghost con Kraken y Cypress
+# Pruebas de Regresión Visual sobre Ghost en versiones 4.5 y 5.96.0
 
 ## Integrantes
 
@@ -8,36 +8,53 @@
 | Oscar David Torres Sánchez | o.torress@uniandes.edu.co |
 
 ## Requisitos 
-1. Cypress
-2. Node v20.12.2
-3. kraken-node
-4. Ghost v5.100.0
-5. Tener un usuario registrado en el aplicativo ghost
+1. Docker
+2. Cypress
+3. Node v20.12.2
+4. kraken-node
 
-## Instalación de Kraken
-1. Clona el repositorio donde se encuentran los escenarios de prueba
+## Instalación de Ghost usando Docker
+1. Clona el repositorio del proyecto.
    
    ```bash
    git clone https://github.com/danisanchezag2/e2e_test_kraken_cypress.git
    
-2. Dirígete al directorio kraken/
+2. En la raíz del proyect, ejecuta el comando de docker para crear/iniciar los contenedores de las version 4.5 y 5.96.0 de Ghost.
    
    ```bash
-   cd kraken/
+   docker-compose up
    
-3. Instala las dependencias necesarias usando el comando npm install
+3. Verifica que las versiones instaladas estan corriendo correctamente.
+   
+   Para Ghost 4.5 corre sobre el puerto 2371
+   <img width="902" alt="Screenshot 2024-11-16 at 1 05 12 PM" src="https://github.com/user-attachments/assets/a7f2ab0a-e00d-477a-8054-0dc6be13db7f">
+
+   Para Ghost 5.96.0 corre sobre el puerto 2370
+   <img width="722" alt="Screenshot 2024-11-16 at 1 05 57 PM" src="https://github.com/user-attachments/assets/9c123f4c-8076-4468-b8f2-765a91b237c1">
+
+4. Crea el usuario inicial en cada una de las versiones (si corresponde).
+
+## Instalación de Kraken
+1. Dirígete al directorio kraken/ ya sea dentro de la carpeta ghost4.5 ó ghost5.96.0
+   
+   ```bash
+   cd ghost4.5/kraken/
+   cd ghost5.96.0/kraken/
+   
+2. Instala las dependencias necesarias usando el comando npm install
    
    ```bash
    npm install
    
-4. Ejecuta el comando de diagnóstico para verificar que todas las dependencias del sistema están instaladas correctamente
+3. Ejecuta el comando de diagnóstico para verificar que todas las dependencias del sistema están instaladas correctamente
    
    ```bash
    npx kraken-node doctor
    
-5. Si el diagnóstico encuentra problemas, instala las dependencias faltantes según las recomendaciones. Esto puede incluir instalar controladores de dispositivos o configuraciones específicas del sistema.
+4. Si el diagnóstico encuentra problemas, instala las dependencias faltantes según las recomendaciones. Esto puede incluir instalar controladores de dispositivos o configuraciones específicas del sistema.
    
-6. Configura las variables de entorno necesarias (si corresponde), como credenciales o configuraciones del entorno de pruebas.
+5. Configura las variables de entorno necesarias (si corresponde), como credenciales o configuraciones del entorno de pruebas.
+6. Verifica en la otra versión de ghost si ya lo tienes instalado de manera correcta, de lo contrario ejecuta estos mismos pasos de nuevo sobre la carpeta de la otra versión de ghost.
 
 Para más información puedes consultar el repositorio del proyecto Kraken: https://thesoftwaredesignlab.github.io/Kraken/
 
