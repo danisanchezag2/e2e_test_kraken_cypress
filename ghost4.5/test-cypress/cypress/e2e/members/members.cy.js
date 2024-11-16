@@ -12,7 +12,7 @@ describe('I am logged into Ghost', function() {
     loginPage.login();
     //  When I navigate to the members page
     membersPage.navigateToMembers();
-    screenshot('Members','EP-03 Create a new member with name and email', 'When I navigate to the members page');
+    screenshot('Members','EP-03 Create a new member with name and email', 'When I navigate to the members');
     // And I click the new member button
     membersPage.clickNewMemberButton();
     screenshot('Members','EP-03 Create a new member with name and email', 'And I click the new member button');
@@ -30,7 +30,7 @@ describe('I am logged into Ghost', function() {
      loginPage.login();
     //  When I navigate to the members page
     membersPage.navigateToMembers();
-    screenshot('Members', 'EP-04 Edit name and email of an existing member', 'When I navigate to the members page');
+    screenshot('Members', 'EP-04 Edit name and email of an existing member', 'When I navigate to the members');
     //  And I click on the first member of the list
     membersPage.clickFirstMember();
     screenshot('Members','EP-04 Edit name and email of an existing member', 'And I click on the first member of the list');
