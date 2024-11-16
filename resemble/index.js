@@ -36,7 +36,7 @@ async function executeTest(){
                   fs.readFileSync(newPath),
                   options
                 );
-                let [module, scenario, step] = file.split('.')[0].split('||');
+                let [module, scenario, step] = file.split('.')[0].split('---');
                 resultInfo.push({
                   isSameDimensions: data.isSameDimensions,
                   dimensionDifference: data.dimensionDifference,
