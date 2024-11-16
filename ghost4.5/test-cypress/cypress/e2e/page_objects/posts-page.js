@@ -38,6 +38,7 @@ class PostsPage {
         cy.get('.settings-menu-delete-button').scrollIntoView();
         cy.wait(2000);
         cy.get('.settings-menu-delete-button').click();
+        cy.wait(4000);
     }
     clickConfirmDeleteButton() {
         cy.get('.gh-btn-red').click();
