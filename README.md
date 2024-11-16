@@ -83,11 +83,27 @@ Despues de seguir los pasos anterios para la instalación de Kraken, estamos lis
    
    ```bash
    git clone https://github.com/danisanchezag2/e2e_test_kraken_cypress.git
-   
-2. Dirígete al directorio test-cypress/
+
+2. En la raíz del proyect, ejecuta el comando de docker para crear/iniciar los contenedores de las version 4.5 y 5.96.0 de Ghost.
    
    ```bash
-   cd test-cypress/
+   docker-compose up
+   
+3. Verifica que las versiones instaladas estan corriendo correctamente.
+   
+   Para Ghost 4.5 corre sobre el puerto 2371
+   <img width="902" alt="Screenshot 2024-11-16 at 1 05 12 PM" src="https://github.com/user-attachments/assets/a7f2ab0a-e00d-477a-8054-0dc6be13db7f">
+
+   Para Ghost 5.96.0 corre sobre el puerto 2370
+   <img width="722" alt="Screenshot 2024-11-16 at 1 05 57 PM" src="https://github.com/user-attachments/assets/9c123f4c-8076-4468-b8f2-765a91b237c1">
+
+4. Crea el usuario inicial en cada una de las versiones (si corresponde).
+
+5. Dirígete al directorio test-cypress/ ya sea dentro de la carpeta ghost4.5 ó ghost5.96.0
+   
+```bash
+   cd ghost4.5/test-cypress/
+   cd ghost5.96.0/test-cypress/
    
 3. Instala las dependencias necesarias usando el comando npm install
    
@@ -108,4 +124,23 @@ Cuando se corre npm run test, estaremos interactuando con la interfaz de cypress
 2. Seleccionar las pruebas e2e ![image](https://github.com/user-attachments/assets/8d8e1923-345e-4d78-87a9-be14f720da08)
 3. Seleccionar un navegador para la ejecución y hacer click en start ![image](https://github.com/user-attachments/assets/f1d45e5e-e4b1-4ae1-be38-2933382b9a55)
 4. Ya allí podremos seleccionar las pruebas y ver su ejecución ![image](https://github.com/user-attachments/assets/0da7db4c-917f-46d2-b235-8a29fb5bd2a4)
+
+
+## Ejecutar regresion con BackstopJS
+1. Genera las imágenes de referencia usando el siguiente comando
+   ```bash
+      npx backstop reference
+2. Ejecuta las pruebas de regresión visual con BackstopJS usando el siguiente comando:
+   ```bash
+      npx backstop test
+
+3. Si deseas actualizar las imágenes de referencia, ejecuta el siguiente comando:
+   ```bash
+      npx backstop approve
+
+4. Para ejecutar las pruebas de regresión visual en un entorno remoto, usa el siguiente comando:
+   ```bash
+      npx backstop remote
+
+5. Revisa el reporte generado en la carpeta backstop_data/html_report para ver los resultados de las pruebas.
 
