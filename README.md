@@ -101,7 +101,7 @@ Despues de seguir los pasos anterios para la instalación de Kraken, estamos lis
 
 5. Dirígete al directorio test-cypress/ ya sea dentro de la carpeta ghost4.5 ó ghost5.96.0
    
-```bash
+   ```bash
    cd ghost4.5/test-cypress/
    cd ghost5.96.0/test-cypress/
    
