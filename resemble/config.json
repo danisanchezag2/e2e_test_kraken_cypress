@@ -9,13 +9,13 @@
                 "blue": 255
             },
             "errorType": "movement",
-            "largeImageThreshold": 1200,
+            "largeImageThreshold": 1500,
             "useCrossOrigin": false,
             "outputDiff": true
         },
         "scaleToSameSize": true,
         "ignore": "antialiasing"
     },
-    "viewportHeight":600, 
-    "viewportWidth":800
+    "viewportHeight": 768,
+    "viewportWidth": 1366
 }

@@ -16,7 +16,7 @@ class AbstractPage {
     async takeScreenshot(stepName) {
         const moduleName = this.constructor.name.toLowerCase();
         const scenarioName = this.currentScenario || 'unknown-scenario';
-        const fileName = `${scenarioName}||${moduleName}||${stepName}.png`;
+        const fileName = `${scenarioName}---${moduleName}---${stepName}.png`;
         const screenshotPath = `${this.imgPath}/${fileName}`;
         
         await this.driver.saveScreenshot(screenshotPath);
