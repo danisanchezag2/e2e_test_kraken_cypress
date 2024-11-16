@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step1_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step1_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step1_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step1_0_document_0_default.png",
         "label": "Members-EP-03 Create a new member with name and email-Step1",
@@ -20,9 +20,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 4.431041666666666,
-          "misMatchPercentage": "4.43",
-          "analysisTime": 36
+          "rawMisMatchPercentage": 4.438124999999999,
+          "misMatchPercentage": "4.44",
+          "analysisTime": 45
         }
       },
       "status": "pass"
@@ -30,7 +30,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step2_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step2_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step2_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step2_0_document_0_default.png",
         "label": "Members-EP-03 Create a new member with name and email-Step2",
@@ -46,9 +46,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 6.259375,
-          "misMatchPercentage": "6.26",
-          "analysisTime": 44
+          "rawMisMatchPercentage": 6.3670833333333325,
+          "misMatchPercentage": "6.37",
+          "analysisTime": 104
         }
       },
       "status": "pass"
@@ -56,7 +56,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step3_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step3_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step3_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step3_0_document_0_default.png",
         "label": "Members-EP-03 Create a new member with name and email-Step3",
@@ -72,17 +72,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 6.4627083333333335,
-          "misMatchPercentage": "6.46",
-          "analysisTime": 42
-        }
+          "rawMisMatchPercentage": 15.714791666666667,
+          "misMatchPercentage": "15.71",
+          "analysisTime": 103
+        },
+        "diffImage": "..\\bitmaps_test\\20241116-122349\\failed_diff_backstop_cypress_Members-EP-03_Create_a_new_member_with_name_and_email-Step3_0_document_0_default.png"
       },
-      "status": "pass"
+      "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step1_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step1_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step1_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step1_0_document_0_default.png",
         "label": "Members-EP-04 Edit name and email of an existing member-Step1",
@@ -98,9 +99,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 6.176458333333333,
-          "misMatchPercentage": "6.18",
-          "analysisTime": 46
+          "rawMisMatchPercentage": 6.2924999999999995,
+          "misMatchPercentage": "6.29",
+          "analysisTime": 107
         }
       },
       "status": "pass"
@@ -108,7 +109,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step2_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step2_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step2_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step2_0_document_0_default.png",
         "label": "Members-EP-04 Edit name and email of an existing member-Step2",
@@ -124,9 +125,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 7.438958333333333,
-          "misMatchPercentage": "7.44",
-          "analysisTime": 38
+          "rawMisMatchPercentage": 7.335,
+          "misMatchPercentage": "7.33",
+          "analysisTime": 95
         }
       },
       "status": "pass"
@@ -134,7 +135,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step3_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step3_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step3_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step3_0_document_0_default.png",
         "label": "Members-EP-04 Edit name and email of an existing member-Step3",
@@ -150,18 +151,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 15.674375,
-          "misMatchPercentage": "15.67",
-          "analysisTime": 44
+          "rawMisMatchPercentage": 15.704375,
+          "misMatchPercentage": "15.70",
+          "analysisTime": 108
         },
-        "diffImage": "..\\bitmaps_test\\20241116-104528\\failed_diff_backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step3_0_document_0_default.png"
+        "diffImage": "..\\bitmaps_test\\20241116-122349\\failed_diff_backstop_cypress_Members-EP-04_Edit_name_and_email_of_an_existing_member-Step3_0_document_0_default.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Pages-EP-09_Create_a_new_page_-Step1_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Pages-EP-09_Create_a_new_page_-Step1_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Pages-EP-09_Create_a_new_page_-Step1_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Pages-EP-09_Create_a_new_page_-Step1_0_document_0_default.png",
         "label": "Pages-EP-09 Create a new page -Step1",
@@ -177,18 +178,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 8.260416666666668,
-          "misMatchPercentage": "8.26",
-          "analysisTime": 33
+          "rawMisMatchPercentage": 9.782499999999999,
+          "misMatchPercentage": "9.78",
+          "analysisTime": 45
         },
-        "diffImage": "..\\bitmaps_test\\20241116-104528\\failed_diff_backstop_cypress_Pages-EP-09_Create_a_new_page_-Step1_0_document_0_default.png"
+        "diffImage": "..\\bitmaps_test\\20241116-122349\\failed_diff_backstop_cypress_Pages-EP-09_Create_a_new_page_-Step1_0_document_0_default.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step2_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step2_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step2_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step2_0_document_0_default.png",
         "label": "Pages - EP-09 Create a new page -Step2",
@@ -204,9 +205,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 1.0406250000000001,
+          "rawMisMatchPercentage": 1.0404166666666668,
           "misMatchPercentage": "1.04",
-          "analysisTime": 29
+          "analysisTime": 60
         }
       },
       "status": "pass"
@@ -214,7 +215,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step3_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step3_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step3_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step3_0_document_0_default.png",
         "label": "Pages - EP-09 Create a new page -Step3",
@@ -230,17 +231,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 6.323333333333333,
-          "misMatchPercentage": "6.32",
-          "analysisTime": 37
-        }
+          "rawMisMatchPercentage": 8.07,
+          "misMatchPercentage": "8.07",
+          "analysisTime": 63
+        },
+        "diffImage": "..\\bitmaps_test\\20241116-122349\\failed_diff_backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step3_0_document_0_default.png"
       },
-      "status": "pass"
+      "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step4_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step4_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step4_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Pages_-_EP-09_Create_a_new_page_-Step4_0_document_0_default.png",
         "label": "Pages - EP-09 Create a new page -Step4",
@@ -256,9 +258,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 5.751666666666667,
-          "misMatchPercentage": "5.75",
-          "analysisTime": 41
+          "rawMisMatchPercentage": 5.71625,
+          "misMatchPercentage": "5.72",
+          "analysisTime": 88
         }
       },
       "status": "pass"
@@ -266,7 +268,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-Step1_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-Step1_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-Step1_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Pages_-_EP-10_Delete_a_page_-Step1_0_document_0_default.png",
         "label": "Pages - EP-10 Delete a page -Step1",
@@ -282,9 +284,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 6.284166666666667,
-          "misMatchPercentage": "6.28",
-          "analysisTime": 34
+          "rawMisMatchPercentage": 7.811041666666667,
+          "misMatchPercentage": "7.81",
+          "analysisTime": 115
         }
       },
       "status": "pass"
@@ -292,7 +294,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step2_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step2_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step2_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step2_0_document_0_default.png",
         "label": "Pages - EP-10 Delete a page - Step2",
@@ -308,9 +310,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 6.284166666666667,
-          "misMatchPercentage": "6.28",
-          "analysisTime": 40
+          "rawMisMatchPercentage": 7.813541666666667,
+          "misMatchPercentage": "7.81",
+          "analysisTime": 99
         }
       },
       "status": "pass"
@@ -318,7 +320,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step3_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step3_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step3_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step3_0_document_0_default.png",
         "label": "Pages - EP-10 Delete a page - Step3",
@@ -334,18 +336,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 62.413541666666674,
-          "misMatchPercentage": "62.41",
-          "analysisTime": 73
+          "rawMisMatchPercentage": 62.36833333333334,
+          "misMatchPercentage": "62.37",
+          "analysisTime": 89
         },
-        "diffImage": "..\\bitmaps_test\\20241116-104528\\failed_diff_backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step3_0_document_0_default.png"
+        "diffImage": "..\\bitmaps_test\\20241116-122349\\failed_diff_backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step3_0_document_0_default.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step4_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step4_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step4_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step4_0_document_0_default.png",
         "label": "Pages - EP-10 Delete a page - Step4",
@@ -361,18 +363,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 54.67541666666666,
-          "misMatchPercentage": "54.68",
-          "analysisTime": 59
+          "rawMisMatchPercentage": 54.728750000000005,
+          "misMatchPercentage": "54.73",
+          "analysisTime": 143
         },
-        "diffImage": "..\\bitmaps_test\\20241116-104528\\failed_diff_backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step4_0_document_0_default.png"
+        "diffImage": "..\\bitmaps_test\\20241116-122349\\failed_diff_backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step4_0_document_0_default.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step5_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step5_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step5_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step5_0_document_0_default.png",
         "label": "Pages - EP-10 Delete a page - Step5",
@@ -388,9 +390,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 4.562083333333334,
-          "misMatchPercentage": "4.56",
-          "analysisTime": 40
+          "rawMisMatchPercentage": 6.229583333333333,
+          "misMatchPercentage": "6.23",
+          "analysisTime": 76
         }
       },
       "status": "pass"
@@ -398,7 +400,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step6_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step6_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step6_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Pages_-_EP-10_Delete_a_page_-_Step6_0_document_0_default.png",
         "label": "Pages - EP-10 Delete a page - Step6",
@@ -414,9 +416,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 6.065416666666667,
-          "misMatchPercentage": "6.07",
-          "analysisTime": 49
+          "rawMisMatchPercentage": 6.145416666666667,
+          "misMatchPercentage": "6.15",
+          "analysisTime": 53
         }
       },
       "status": "pass"
@@ -424,7 +426,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Post_-_EP-05_Create_a_post_-_Step1_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Post_-_EP-05_Create_a_post_-_Step1_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Post_-_EP-05_Create_a_post_-_Step1_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Post_-_EP-05_Create_a_post_-_Step1_0_document_0_default.png",
         "label": "Post - EP-05 Create a post - Step1",
@@ -440,9 +442,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.9943749999999999,
+          "rawMisMatchPercentage": 0.9947916666666667,
           "misMatchPercentage": "0.99",
-          "analysisTime": 35
+          "analysisTime": 86
         }
       },
       "status": "pass"
@@ -450,7 +452,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Post_-_EP-05_Create_a_post_-_Step2_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Post_-_EP-05_Create_a_post_-_Step2_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Post_-_EP-05_Create_a_post_-_Step2_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Post_-_EP-05_Create_a_post_-_Step2_0_document_0_default.png",
         "label": "Post - EP-05 Create a post - Step2",
@@ -466,18 +468,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 62.50770833333333,
-          "misMatchPercentage": "62.51",
-          "analysisTime": 45
+          "rawMisMatchPercentage": 62.5725,
+          "misMatchPercentage": "62.57",
+          "analysisTime": 103
         },
-        "diffImage": "..\\bitmaps_test\\20241116-104528\\failed_diff_backstop_cypress_Post_-_EP-05_Create_a_post_-_Step2_0_document_0_default.png"
+        "diffImage": "..\\bitmaps_test\\20241116-122349\\failed_diff_backstop_cypress_Post_-_EP-05_Create_a_post_-_Step2_0_document_0_default.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Post_-_EP-05_Create_a_post_-_Step3_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Post_-_EP-05_Create_a_post_-_Step3_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Post_-_EP-05_Create_a_post_-_Step3_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Post_-_EP-05_Create_a_post_-_Step3_0_document_0_default.png",
         "label": "Post - EP-05 Create a post - Step3",
@@ -493,9 +495,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 5.344374999999999,
-          "misMatchPercentage": "5.34",
-          "analysisTime": 50
+          "rawMisMatchPercentage": 5.283125,
+          "misMatchPercentage": "5.28",
+          "analysisTime": 47
         }
       },
       "status": "pass"
@@ -503,7 +505,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step1_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step1_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step1_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step1_0_document_0_default.png",
         "label": "Post - EP-06 Delete a post - Step1",
@@ -519,9 +521,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 7.436041666666666,
-          "misMatchPercentage": "7.44",
-          "analysisTime": 39
+          "rawMisMatchPercentage": 4.660833333333334,
+          "misMatchPercentage": "4.66",
+          "analysisTime": 66
         }
       },
       "status": "pass"
@@ -529,7 +531,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step2_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step2_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step2_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step2_0_document_0_default.png",
         "label": "Post - EP-06 Delete a post - Step2",
@@ -545,9 +547,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 5.209791666666667,
-          "misMatchPercentage": "5.21",
-          "analysisTime": 44
+          "rawMisMatchPercentage": 5.0806249999999995,
+          "misMatchPercentage": "5.08",
+          "analysisTime": 42
         }
       },
       "status": "pass"
@@ -555,7 +557,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step3_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step3_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step3_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step3_0_document_0_default.png",
         "label": "Post - EP-06 Delete a post - Step3",
@@ -571,18 +573,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 62.43145833333333,
-          "misMatchPercentage": "62.43",
-          "analysisTime": 41
+          "rawMisMatchPercentage": 62.16020833333333,
+          "misMatchPercentage": "62.16",
+          "analysisTime": 76
         },
-        "diffImage": "..\\bitmaps_test\\20241116-104528\\failed_diff_backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step3_0_document_0_default.png"
+        "diffImage": "..\\bitmaps_test\\20241116-122349\\failed_diff_backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step3_0_document_0_default.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step4_0_document_0_default.png",
-        "test": "..\\bitmaps_test\\20241116-104528\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step4_0_document_0_default.png",
+        "test": "..\\bitmaps_test\\20241116-122349\\backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step4_0_document_0_default.png",
         "selector": "document",
         "fileName": "backstop_cypress_Post_-_EP-06_Delete_a_post_-_Step4_0_document_0_default.png",
         "label": "Post - EP-06 Delete a post - Step4",
@@ -598,9 +600,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 6.063124999999999,
-          "misMatchPercentage": "6.06",
-          "analysisTime": 24
+          "rawMisMatchPercentage": 3.0741666666666667,
+          "misMatchPercentage": "3.07",
+          "analysisTime": 82
         }
       },
       "status": "pass"
