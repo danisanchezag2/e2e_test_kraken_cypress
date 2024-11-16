@@ -6,4 +6,5 @@ Given('I am logged into Ghost', async function () {
     await this.login.setPasswordValue('Control12345.');
     await this.login.clickSignInButton();
     await this.login.initialPageDisplayed();
+    // await this.login.takeScreenshot('initial-page')
 });

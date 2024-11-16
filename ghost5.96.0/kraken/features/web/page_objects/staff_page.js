@@ -53,11 +53,6 @@ class StaffPage extends AbstractPage {
     await this.driver.keys(key);
   }
 
-  async refreshResults() {
-    await this.driver.execute(() => location.reload(true));
-    await this.driver.pause(2000);
-  }
-
   async clickOnInvitedTab() {
     const button = await this.driver.$('div[data-testid="users"] button#invited');
     await button.waitForDisplayed({ timeout: 5000 });

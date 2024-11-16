@@ -8,7 +8,7 @@ let expect;
 
 class PostsPage extends AbstractPage {
   async navigateToPostsPage() {
-    await this.driver.$('[data-test-nav="posts"]').click();
+    await this.driver.$('a[href="#/posts/"]').click();
     await this.checkPostPage();
   }
 
@@ -23,32 +23,27 @@ class PostsPage extends AbstractPage {
   }
 
   async setPostDescriptionValue(description) {
-    const postDescription = await this.driver.$('div.kg-prose[contenteditable="true"]');
+    const postDescription = await this.driver.$('div.koenig-editor__editor[contenteditable="true"]');
     await postDescription.waitForDisplayed({ timeout: 5000 });
     await postDescription.setValue(description);
   }
 
   async clickOnPublishButton() {
-    const button = await this.driver.$('[data-test-button="publish-flow"]');
+    const button = await this.driver.$('div.gh-publishmenu-trigger');
     await button.waitForDisplayed({ timeout: 5000 });
     await button.click();
   }
   
-  async clickOnContinueButton() {
-    const button = await this.driver.$('[data-test-button="continue"]');
-    await button.waitForDisplayed({ timeout: 5000 });
-    await button.click();
-  }
-
   async clickOnConfirmButton() {
-    const button = await this.driver.$('[data-test-button="confirm-publish"]');
+    const button = await this.driver.$('button.gh-publishmenu-button');
     await button.waitForDisplayed({ timeout: 5000 });
     await button.click();
   }
 
   async checkConfirmationMessage() {
-    const msg = await this.driver.$(`header.modal-header span`);
-    expect(await msg.getText()).to.equal("Boom! It's out there.");
+    const msg = await this.driver.$('.gh-notification-title');
+    await msg.waitForDisplayed({ timeout: 5000 });
+    expect(await msg.getText()).to.equal('Published');
   }
 
   async clickOnSettingsButton() {
@@ -84,11 +79,11 @@ class PostsPage extends AbstractPage {
   }
 
   async getDeleteButton() {
-    return await this.driver.$('[data-test-button="delete-post"]');
+    return await this.driver.$('button.settings-menu-delete-button');
   }
 
   async getDeleteButtonConfirmation() {
-    return await this.driver.$('[data-test-button="delete-post-confirm"]');
+    return await this.driver.$('section.modal-content button.gh-btn-red');
   }
   
   async checkPostPage() {

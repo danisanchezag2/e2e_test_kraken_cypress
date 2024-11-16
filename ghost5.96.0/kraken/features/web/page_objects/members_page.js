@@ -8,7 +8,8 @@ let expect;
 
 class MembersPage extends AbstractPage {
   async navigateToMembersPage() {
-    await this.driver.$('[data-test-nav="members"]').click();
+    await this.driver.url(this.baseUrl + "#/members");
+    await this.refreshResults();
     const memberHeader = await this.driver.$('h2.gh-canvas-title');
     await memberHeader.waitForDisplayed({ timeout: 5000 });
     expect(await memberHeader.getText()).to.equal('Members');

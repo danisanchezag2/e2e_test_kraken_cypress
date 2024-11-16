@@ -8,10 +8,19 @@ let expect;
 
 class MembersPage extends AbstractPage {
   async navigateToMembersPage() {
-    await this.driver.$('[data-test-nav="members"]').click();
-    const memberHeader = await this.driver.$('h2.gh-canvas-title');
-    await memberHeader.waitForDisplayed({ timeout: 5000 });
-    expect(await memberHeader.getText()).to.equal('Members');
+    await this.driver.url(this.baseUrl + "#/members");
+    await this.refreshResults();
+
+    await this.driver.waitUntil(async () => {
+        const newMemberButton = await this.driver.$('a[href="#/members/new/"]');
+        return await newMemberButton.isDisplayed();
+    }, {
+        timeout: 5000,
+        timeoutMsg: `Members page did not load within the expected time`
+    });
+
+    const newMemberButton = await this.driver.$('a[href="#/members/new/"]');
+    expect(await newMemberButton.isDisplayed()).to.be.true;
   }
 
   async clickOnNewButton() {
@@ -33,7 +42,7 @@ class MembersPage extends AbstractPage {
   }
 
   async clickOnSaveButton() {
-    const button = await this.driver.$('[data-test-button="save"]');
+    const button = await this.driver.$('button.gh-btn-primary');
     await button.waitForDisplayed({ timeout: 5000 });
     await button.click();
   }
