@@ -3,3 +3,5 @@
 node_modules
 
 ghost*/kraken/reports/*
+backstop_data/bitmaps_reference/*
+backstop_data/bitmaps_test/*
