@@ -6,7 +6,6 @@ Scenario: EP-09 Create a new page
   When I navigate to the pages page
   And I click on New Page button
   And I create a new page with title "$string_1" and description "$string_2"
-  And I click on the button Continue, final review in the new page
   And I click on the button Publish, right now in the new page
   Then I should see the confirmation message in the Pages page
 

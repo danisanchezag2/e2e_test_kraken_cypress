@@ -7,8 +7,8 @@ let expect;
 })();
 
 class LoginPage extends AbstractPage {
-  constructor(driver) {
-    super(driver);
+  constructor(driver, currentScenario) {
+    super(driver, currentScenario);
     this.url = this.baseUrl + "#/signin";
   }
 
@@ -17,19 +17,19 @@ class LoginPage extends AbstractPage {
   }
 
   async setEmailValue(email) {
-    const emailInput = await this.driver.$("#identification");
+    const emailInput = await this.driver.$("input[name='identification']");
     await emailInput.waitForDisplayed({ timeout: 5000 });
     await emailInput.setValue(email);
   }
 
   async setPasswordValue(password) {
-    const passwordInput = await this.driver.$("#password");
+    const passwordInput = await this.driver.$("input[name='password']");
     await passwordInput.waitForDisplayed({ timeout: 5000 });
     await passwordInput.setValue(password);
   }
 
   async clickSignInButton() {
-    const signInButton = await this.driver.$("[data-test-button='sign-in']");
+    const signInButton = await this.driver.$("button.login");
     await signInButton.waitForDisplayed({ timeout: 5000 });
     await signInButton.click();
   }

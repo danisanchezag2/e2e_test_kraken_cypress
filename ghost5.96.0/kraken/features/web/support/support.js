@@ -16,12 +16,12 @@ class KrakenWorld {
   }
 
   async init() {
-    this.login = new LoginPage(this.driver);
-    this.tags = new TagsPage(this.driver);
-    this.members = new MembersPage(this.driver);
-    this.posts = new PostsPage(this.driver);
-    this.pages = new PagesPage(this.driver);
-    this.staff = new StaffPage(this.driver);
+    this.login = new LoginPage(this.driver, this.currentScenario);
+    this.members = new MembersPage(this.driver, this.currentScenario);
+    this.posts = new PostsPage(this.driver, this.currentScenario);
+    this.pages = new PagesPage(this.driver, this.currentScenario);
+    this.tags = new TagsPage(this.driver, this.currentScenario);
+    this.staff = new StaffPage(this.driver, this.currentScenario);
   }
 }
 
