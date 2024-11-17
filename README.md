@@ -54,16 +54,19 @@
 4. Si el diagnóstico encuentra problemas, instala las dependencias faltantes según las recomendaciones. Esto puede incluir instalar controladores de dispositivos o configuraciones específicas del sistema.
    
 5. Configura las variables de entorno necesarias (si corresponde), como credenciales o configuraciones del entorno de pruebas.
+   
 6. Verifica en la otra versión de ghost si ya lo tienes instalado de manera correcta, de lo contrario ejecuta estos mismos pasos de nuevo sobre la carpeta de la otra versión de ghost.
 
 Para más información puedes consultar el repositorio del proyecto Kraken: https://thesoftwaredesignlab.github.io/Kraken/
 
 ## Ejecución de escenarios de prueba en Kraken
-Despues de seguir los pasos anterios para la instalación de Kraken, estamos listos para empezar a ejecutar nuestras pruebas de la siguiente forma: 
-1. Asegurate de estar ubicado en el directorio kraken/
+Despues de seguir los pasos anteriores, estamos listos para empezar a ejecutar nuestras pruebas de la siguiente forma: 
+
+1. Asegurate de estar ubicado en el directorio kraken/ ya sea dentro de la carpeta ghost4.5 ó ghost5.96.0
    
    ```bash
-   cd kraken/
+   cd ghost4.5/kraken/
+   cd ghost5.96.0/kraken/
    
 2. Ejecuta el comando npx kraken-node run
    
@@ -76,6 +79,38 @@ Despues de seguir los pasos anterios para la instalación de Kraken, estamos lis
    <img width="1459" alt="Screenshot 2024-11-09 at 11 34 07 PM" src="https://github.com/user-attachments/assets/e55ded91-fed9-49c5-9203-3ad90186db55">
    
    <img width="1468" alt="Screenshot 2024-11-09 at 11 34 42 PM" src="https://github.com/user-attachments/assets/3606c7c0-e1bf-4da3-8786-bb4f2965fb8f">
+
+## Ejecución de Pruebas de Regresión con ResembleJS
+1. Asegurate de haber ejecutado las pruebas de kraken en las versiones de Ghost disponibles.
+   
+2. Desde la raíz del proyecto, dirígete al directorio resemble/
+   
+   ```bash
+   cd resemble/
+   
+3. Instala las dependencias usando el campos de npm install (esto se hace la primera vez que se va a ejecutar las pruebas)
+   
+   ```bash
+   npm install
+
+4. Instala las dependencias usando el campos de npm install (esto se hace la primera vez que se va a ejecutar las pruebas)
+   
+   ```bash
+   npm install
+
+5. Resemble usa la libreria de canvas para la ejecución de pruebas, asegurate de tener instalada esta librería
+   
+   ```bash
+   npm install canvas
+
+6. Ejecuta las pruebas ejecutando el script
+   
+   ```bash
+   node index.js
+
+7. El script generara el reporte con los resultados de la prueba, el cual podrias verificar en results/
+
+   <img width="1464" alt="Screenshot 2024-11-16 at 6 29 58 PM" src="https://github.com/user-attachments/assets/d5012cdf-5404-4be0-9980-d9f9a4c1849a">
 
 
 ## Instalacion de Cypress
@@ -105,18 +140,22 @@ Despues de seguir los pasos anterios para la instalación de Kraken, estamos lis
    cd ghost4.5/test-cypress/
    cd ghost5.96.0/test-cypress/
    
-3. Instala las dependencias necesarias usando el comando npm install
+6. Instala las dependencias necesarias usando el comando npm install
    
    ```bash
    npm install
    
-4. Ejecuta Cypress en modo interactivo
+7. Ejecuta Cypress en modo interactivo
    
    ```bash
    npm run start
-   4.1. O ejecuta Cypress en modo headless
-        ```bash
-      npm run test
+   ```
+   
+   Ó ejecuta Cypress en modo headless
+   
+   ```bash
+   npm run start
+   ```
 
 ## Ejecucion de Cypress Interfaz
 Cuando se corre npm run test, estaremos interactuando con la interfaz de cypress
