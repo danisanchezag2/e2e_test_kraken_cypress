@@ -20,7 +20,7 @@ class PostsPage {
     }
     clickConfirmPublish(){
         cy.get('[data-test-button="confirm-publish"]').click();
-        cy.wait(4000);
+        cy.wait(1000);
     }
     verifyPostExists(title) {
         cy.get('[data-test-publish-flow="complete"]').contains(title).should('exist');
@@ -35,7 +35,7 @@ class PostsPage {
         cy.get('.settings-menu-delete-button > .gh-btn > span').scrollIntoView();
         cy.wait(2000);
         cy.get('[data-test-button="delete-post"]').click();
-        cy.wait(5000);
+        cy.wait(2000);
     }
     clickConfirmDeleteButton() {
         cy.get('[data-test-button="delete-post-confirm"]').click();

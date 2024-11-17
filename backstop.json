@@ -46,7 +46,7 @@
     },
     {
       "label": "Members-EP-03 Create a new member with name and email-Step3",
-      "referenceUrl": "https://raw.githubusercontent.com/danisanchezag2/e2e_test_kraken_cypress/refs/heads/main/ghost4.5/test-cypress/cypress/screenshots/Members%20-%20EP-03%20Create%20a%20new%20member%20with%20name%20and%20email%20-%20When%20I%20navigate%20to%20the%20members%20page.png",
+      "referenceUrl": "https://raw.githubusercontent.com/danisanchezag2/e2e_test_kraken_cypress/refs/heads/main/ghost4.5/test-cypress/cypress/screenshots/Members%20-%20EP-03%20Create%20a%20new%20member%20with%20name%20and%20email%20-%20When%20I%20navigate%20to%20the%20members.png",
       "url": "https://raw.githubusercontent.com/danisanchezag2/e2e_test_kraken_cypress/refs/heads/main/ghost5.96.0/test-cypress/cypress/screenshots/Members%20-%20EP-03%20Create%20a%20new%20member%20with%20name%20and%20email%20-%20When%20I%20navigate%20to%20the%20members.png",
       "readyEvent": "",
       "readySelector": "",
@@ -97,7 +97,7 @@
     },
     {
       "label": "Members-EP-04 Edit name and email of an existing member-Step3",
-      "referenceUrl": "https://raw.githubusercontent.com/danisanchezag2/e2e_test_kraken_cypress/refs/heads/main/ghost4.5/test-cypress/cypress/screenshots/Members%20-%20EP-04%20Edit%20name%20and%20email%20of%20an%20existing%20member%20-%20When%20I%20navigate%20to%20the%20members%20page.png",
+      "referenceUrl": "https://raw.githubusercontent.com/danisanchezag2/e2e_test_kraken_cypress/refs/heads/main/ghost4.5/test-cypress/cypress/screenshots/Members%20-%20EP-04%20Edit%20name%20and%20email%20of%20an%20existing%20member%20-%20When%20I%20navigate%20to%20the%20members.png",
       "url": "https://raw.githubusercontent.com/danisanchezag2/e2e_test_kraken_cypress/refs/heads/main/ghost5.96.0/test-cypress/cypress/screenshots/Members%20-%20EP-04%20Edit%20name%20and%20email%20of%20an%20existing%20member%20-%20When%20I%20navigate%20to%20the%20members.png",
       "readyEvent": "",
       "readySelector": "",
