@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 
 const { signIn } = require('../../support/utils');
-const {Member} = require("../page_objects/member");
+const {Member} = require("../page_objects/members-page");
 
 describe('Create members', () => {    
     const member = new Member();

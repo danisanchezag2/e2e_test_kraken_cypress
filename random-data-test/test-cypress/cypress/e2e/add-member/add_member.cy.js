@@ -1,5 +1,5 @@
 const { signIn, readUsersData } = require('../../support/utils');
-const {Member} = require("../page_objects/member");
+const {Member} = require("../page_objects/members-page");
 
 describe('Create members', () => {
     

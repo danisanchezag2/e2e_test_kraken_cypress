@@ -1,7 +1,19 @@
-class Member {
+const { AbstractPage } = require("./abstract-page");
+
+class MembersPage extends AbstractPage {
+
+    constructor() {
+        super();
+        this.url = '/#/members';
+    }
     
     navigateToMembers() {
         cy.get('[data-test-nav="members"]').click();
+    }
+
+    visitPage() {
+        cy.visit(`${this.baseUrl}${this.url}`);
+        cy.wait(1000);
     }
 
     clickNewMemberButton() {
@@ -10,7 +22,7 @@ class Member {
 
     fillMemberDetailsAndSave(name, email, note) {
         if (name != '') {
-            cy.get('[data-test-input="member-name"]').type(name);
+            cy.get('[data-test-input="member-name"]').clear().type(name);
             cy.wait(2000);
         }
         if (email != '') {
@@ -24,6 +36,16 @@ class Member {
         cy.get('[data-test-button="save"]').click();
         cy.wait(1000);
         return { name, email };
+    }
+
+    clearMemberDetailsAndSave() {
+        cy.get('[data-test-input="member-name"]').clear();
+        cy.get('[data-test-input="member-email"]').clear();
+        cy.get('[data-test-input="member-note"]').clear();
+        cy.wait(1000);
+
+        cy.get('[data-test-button="save"]').click();
+        cy.wait(1000);
     }
 
     verifyMemberExists(email) {
@@ -43,51 +65,11 @@ class Member {
             });
     }
 
-    clickFirstNewMemberLink(){
-        cy.get('a[href="#/members/new/"]').first().click();
-    }
-
     clickLeave(){
         cy.get('button[data-test-leave-button=""]').click()
     }
 
-    uncheckSubscribe(){
-        cy.get('input[data-test-checkbox="member-subscribed"]').click({ force: true })
-    }
-
-    clearName(){
-        cy.get('#member-name').clear();
-    }
-
-    typeName(name) {
-        cy.get('#member-name').type(name);
-    }
-
-    clearEmail(){
-        cy.get('#member-email').clear();
-    }
-
-    typeEmail(email) {
-        cy.get('#member-email').type(email);
-    }
-
-    clearNote(){
-        cy.get('#member-note').clear();
-    }
-
-    typeNote(note) {
-        cy.get('#member-note').type(note);
-    }
-
-    saveCreation(){
-        cy.get('button[data-test-button="save"]').click();
-    }
-
-    returnMembersList(){
-        cy.get('a[data-test-link="members-back"]').click();
-    }
-
-    clickFirstMembersListElement(){
+    clickFirstMemberInList(){
         cy.get('a[data-test-table-data="details"]').first().click();
     }
 
@@ -97,15 +79,11 @@ class Member {
             .should('have.length.at.least', 1);
     }
 
-    checkEmptyStringNameInList(name){
-        cy.get('h3.gh-members-list-name ', { timeout: 10000 })
-            .filter(':contains("")')
-            .should('have.length.at.least', 1);
-    }
-
     checkErrorMessageExist(name){
         cy.get('p.response', { timeout: 10000 }).should('exist');
     }
 }
 
-module.exports = {Member}
+module.exports = {
+    MembersPage
+}
