@@ -5,7 +5,7 @@ import { generateRandomPosts, generateMalformatedYoutubeUrl, generateYoutubeUrl,
 describe('Pseudo Data Generated Tests', () => {
     const postsPage = new PostsPage();
     beforeEach(() => {
-        signIn();
+        postsPage.signIn();
     });
 
   it('should create multiple posts with pseudo data title and content', () => {

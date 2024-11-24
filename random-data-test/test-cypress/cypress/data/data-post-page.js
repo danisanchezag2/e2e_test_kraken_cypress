@@ -96,26 +96,6 @@ const postsFormDataSet = [
     {
       title: "Billie Eilish - bad guy",
       url: "https://open.spotify.com/track/2Fxmhks0bxGSBdJ92vM42m"
-    },
-    {
-      title: "Post Malone - Circles",
-      url: "https://open.spotify.com/track/21jGcNKet2qwijlDFuPiPb"
-    },
-    {
-      title: "Tones And I - Dance Monkey",
-      url: "https://open.spotify.com/track/2XU0oxnq2qxCpomAAuJY8K"
-    },
-    {
-      title: "Shawn Mendes - Señorita",
-      url: "https://open.spotify.com/track/0TK2YIli7K1leLovkQiNik"
-    },
-    {
-      title: "Lewis Capaldi - Someone You Loved",
-      url: "https://open.spotify.com/track/7qEHsqek33rTcFNT9PFqLf"
-    },
-    {
-      title: "Ariana Grande - 7 rings",
-      url: "https://open.spotify.com/track/6ocbgoVGwYJhOv1GgI9NsF"
     }
   ];
   const malformattedSpotifyDataSet = [
@@ -227,4 +207,5 @@ function generateMalformatedSpotifyUrl() {
     return faker.helpers.arrayElement(spotifyDataSet);
   }
 
-module.exports = { generateRandomPosts, generateMalformatedYoutubeUrl, generateYoutubeUrl, generateSpotifyUrl, generateMalformatedSpotifyUrl };
+
+module.exports = { generateRandomPosts, generateMalformatedYoutubeUrl, generateYoutubeUrl, generateSpotifyUrl, generateMalformatedSpotifyUrl, postsDataSet, malformattedYoutubeUrlsDataSet, postsFormDataSet, youtubeDataSet, spotifyDataSet, malformattedSpotifyDataSet, generateYoutubeUrl, generateSpotifyUrl };

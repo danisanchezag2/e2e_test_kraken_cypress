@@ -1,7 +1,8 @@
 import { tagsDataSet, tagsDataSetMoreThan500, tags500CharactersDataSet } from '../../data/data-tags-page';
 import TagsPage from '../page_objects/tags-page';
+import { faker } from '@faker-js/faker';
 
-describe('Tags a priori Data Generated Tests', () => {
+describe('Tags pseudo Data Generated Tests', () => {
     const tagsPage = new TagsPage();
     beforeEach(() => {
         tagsPage.signIn();
@@ -9,7 +10,8 @@ describe('Tags a priori Data Generated Tests', () => {
 
     it('Create a new tag with name and description with less than 500 characters', function() {
         tagsDataSet.forEach((tag, index) => {
-
+            const tagName =  tag.name;
+            const tagDescription = faker.string.alpha(250);
             // When I go to the tags section
             tagsPage.navigateToTags();
         
@@ -17,7 +19,7 @@ describe('Tags a priori Data Generated Tests', () => {
             tagsPage.clickNewTagButton();
         
             // And I fill the tag name and description
-            tagsPage.fillTagNameAndDescription(tag.name, tag.description);
+            tagsPage.fillTagNameAndDescription(tagName, tagDescription);
         
             // And I click on the save button
             tagsPage.saveTag();
@@ -26,7 +28,7 @@ describe('Tags a priori Data Generated Tests', () => {
             tagsPage.navigateToTags();
         
             // Then I should see the new tag in the list
-            tagsPage.verifyTagExists(tag.name);
+            tagsPage.verifyTagExists(tagName);
           }
         );
       });
@@ -34,7 +36,8 @@ describe('Tags a priori Data Generated Tests', () => {
 
       it('Create a new tag with name and description with 500 characters', function() {
         tags500CharactersDataSet.forEach((tag, index) => {
-
+            const tagName =  faker.name.firstName();
+            const tagDescription = tag.description;
           // When I go to the tags section
           tagsPage.navigateToTags();
       
@@ -42,7 +45,7 @@ describe('Tags a priori Data Generated Tests', () => {
           tagsPage.clickNewTagButton();
       
           // And I fill the tag name and description
-          tagsPage.fillTagNameAndDescription(tag.name, tag.description);
+          tagsPage.fillTagNameAndDescription(tagName, tagDescription);
       
           // And I click on the save button
           tagsPage.saveTag();
@@ -51,14 +54,15 @@ describe('Tags a priori Data Generated Tests', () => {
           tagsPage.navigateToTags();
       
           // Then I should see the new tag in the list
-          tagsPage.verifyTagExists(tag.name);
+          tagsPage.verifyTagExists(tagName);
         }
       );
       });
 
       it('Create a new tag with name and description with more than 500 characters', function() {
         tagsDataSetMoreThan500.forEach((tag, index) => {
-
+            const tagName =  tag.name;
+            const tagDescription = faker.lorem.paragraphs(4);
           // When I go to the tags section
           tagsPage.navigateToTags();
       
@@ -66,7 +70,7 @@ describe('Tags a priori Data Generated Tests', () => {
           tagsPage.clickNewTagButton();
       
           // And I fill the tag name and description
-          tagsPage.fillTagNameAndDescription(tag.name, tag.description);
+          tagsPage.fillTagNameAndDescription(tagName, tagDescription);
       
           // And I click on the save button
           tagsPage.saveTag();

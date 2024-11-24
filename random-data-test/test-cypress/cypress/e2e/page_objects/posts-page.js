@@ -1,4 +1,6 @@
-class PostsPage {
+const { AbstractPage } = require("./abstract-page");
+
+class PostsPage extends AbstractPage  {
     navigateToPosts() {
         cy.get('body').type('{esc}');
         cy.get('[data-test-nav="posts"]').click();
@@ -63,8 +65,10 @@ class PostsPage {
     }
 
     addContent(content, url, nthChild = 2) {
+        cy.get(`.kg-prose > :nth-child(${nthChild})`).scrollIntoView();
+        cy.get(`.kg-prose > :nth-child(${nthChild})`).click();
         cy.get(`.kg-prose > :nth-child(${nthChild})`).type(content);
-        cy.wait(1000);
+        cy.wait(200);
         cy.get('[data-testid="embed-url"]').type(`${url}{enter}`);
         cy.wait(2000);
     }
@@ -75,6 +79,8 @@ class PostsPage {
     }
     verifyUrlErrorVisible(){
         cy.get('[data-testid="embed-url-error-message"]').contains("Oops, that link didn't work.").should('exist');
+        cy.wait(1000);
+        cy.get('[data-test-link="posts"]').click();
     }
 
 
