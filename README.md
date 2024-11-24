@@ -87,3 +87,5 @@ Los nombres de los archivos que contienen las pruebas indican el tipo de prueba 
 * [Issue 11](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/11)
 * [Issue 10](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/10)
 * [Issue 9](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/9)
+* [Issue 16](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/16)
+* [Issue 17](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/17)
