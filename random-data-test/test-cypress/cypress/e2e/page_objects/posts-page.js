@@ -67,7 +67,7 @@ class PostsPage extends AbstractPage  {
     addContent(content, url, nthChild = 2) {
         cy.get(`.kg-prose > :nth-child(${nthChild})`).scrollIntoView();
         cy.get(`.kg-prose > :nth-child(${nthChild})`).click();
-        cy.get(`.kg-prose > :nth-child(${nthChild})`).type(content);
+        cy.get(`.kg-prose > :nth-child(${nthChild})`).type(content, { force: true });
         cy.wait(200);
         cy.get('[data-testid="embed-url"]').type(`${url}{enter}`);
         cy.wait(2000);

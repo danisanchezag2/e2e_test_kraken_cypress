@@ -83,7 +83,7 @@ describe('Members - Random', () => {
         for (let index = 0; index < 2; index++) {
             const memberName = faker.person.fullName();
             const memberEmail = faker.internet.email();
-            const memberNote = faker.lorem.lines(1).repeat(60);
+            const memberNote = faker.lorem.lines(1).repeat(60).substring(0, 1000);
 
             member.navigateToMembers();
             member.clickNewMemberButton();
@@ -98,7 +98,7 @@ describe('Members - Random', () => {
         for (let index = 0; index < 2; index++) {
             const memberName = faker.person.fullName();
             const memberEmail = faker.internet.email();
-            const memberNote = faker.lorem.lines(1).repeat(60);
+            const memberNote = faker.lorem.lines(1).repeat(60).substring(0, 1000);
 
             member.navigateToMembers();
             member.clickFirstMemberInList();
