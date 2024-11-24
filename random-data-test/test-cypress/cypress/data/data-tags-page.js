@@ -1,6 +1,6 @@
 const tagsDataSet = [
     {
-      name: "Biotecnología",
+      name: "❤️ 💔 💌 💕 💞 💓 💗 💖 💘 💝 💟 💜 💛 💚 💙",
       description: "Explora los últimos avances en biotecnología y cómo están revolucionando la medicina y la agricultura."
     },
     {
@@ -8,7 +8,7 @@ const tagsDataSet = [
       description: "Conoce los descubrimientos más recientes en física cuántica y sus posibles aplicaciones futuras."
     },
     {
-      name: "Energía Renovable",
+      name: "╯°□°）╯︵ ┻━┻",
       description: "Descubre las innovaciones más recientes en energía renovable y su impacto en el medio ambiente."
     },
     {
