@@ -10,7 +10,7 @@ const malformattedYoutubeUrlsDataSet = [
 const postsFormDataSet = [
     {
       title: "Avances en la biotecnología",
-      content: "Explora los últimos avances en biotecnología y cómo están revolucionando la medicina y la agricultura.",
+      content: "  ",
       image: "https://i.ytimg.com/vi/5Xqyf_qf6F4/default.jpg",
     },
     {

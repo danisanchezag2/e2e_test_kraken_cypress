@@ -1,4 +1,4 @@
-# Pruebas de Regresión Visual sobre Ghost en versiones 4.5 y 5.96.0
+# Pruebas automatizadas con generación de datos
 
 ## Integrantes
 
@@ -24,121 +24,19 @@
    ```bash
    docker-compose up
    
-3. Verifica que las versiones instaladas estan corriendo correctamente.
-   
-   Para Ghost 4.5 corre sobre el puerto 2371
-   <img width="902" alt="Screenshot 2024-11-16 at 1 05 12 PM" src="https://github.com/user-attachments/assets/a7f2ab0a-e00d-477a-8054-0dc6be13db7f">
+3. Verifica que la version que estamos probando (5.96.0) este corriendo correctamente.
 
    Para Ghost 5.96.0 corre sobre el puerto 2370
    <img width="722" alt="Screenshot 2024-11-16 at 1 05 57 PM" src="https://github.com/user-attachments/assets/9c123f4c-8076-4468-b8f2-765a91b237c1">
 
-4. Crea el usuario inicial en cada una de las versiones (si corresponde).
-
-## Instalación de Kraken
-1. Dirígete al directorio kraken/ ya sea dentro de la carpeta ghost4.5 ó ghost5.96.0
-   
-   ```bash
-   cd ghost4.5/kraken/
-   cd ghost5.96.0/kraken/
-   
-2. Instala las dependencias necesarias usando el comando npm install
-   
-   ```bash
-   npm install
-   
-3. Ejecuta el comando de diagnóstico para verificar que todas las dependencias del sistema están instaladas correctamente
-   
-   ```bash
-   npx kraken-node doctor
-   
-4. Si el diagnóstico encuentra problemas, instala las dependencias faltantes según las recomendaciones. Esto puede incluir instalar controladores de dispositivos o configuraciones específicas del sistema.
-   
-5. Configura las variables de entorno necesarias (si corresponde), como credenciales o configuraciones del entorno de pruebas.
-   
-6. Verifica en la otra versión de ghost si ya lo tienes instalado de manera correcta, de lo contrario ejecuta estos mismos pasos de nuevo sobre la carpeta de la otra versión de ghost.
-
-Para más información puedes consultar el repositorio del proyecto Kraken: https://thesoftwaredesignlab.github.io/Kraken/
-
-## Ejecución de escenarios de prueba en Kraken
-Despues de seguir los pasos anteriores, estamos listos para empezar a ejecutar nuestras pruebas de la siguiente forma: 
-
-1. Asegurate de estar ubicado en el directorio kraken/ ya sea dentro de la carpeta ghost4.5 ó ghost5.96.0
-   
-   ```bash
-   cd ghost4.5/kraken/
-   cd ghost5.96.0/kraken/
-   
-2. Ejecuta el comando npx kraken-node run
-   
-   ```bash
-   npx kraken-node run
-   ```
-
-   Deberás ver algo similar a estos print:
-   
-   <img width="1459" alt="Screenshot 2024-11-09 at 11 34 07 PM" src="https://github.com/user-attachments/assets/e55ded91-fed9-49c5-9203-3ad90186db55">
-   
-   <img width="1468" alt="Screenshot 2024-11-09 at 11 34 42 PM" src="https://github.com/user-attachments/assets/3606c7c0-e1bf-4da3-8786-bb4f2965fb8f">
-
-## Ejecución de Pruebas de Regresión con ResembleJS
-1. Asegurate de haber ejecutado las pruebas de kraken en las versiones de Ghost disponibles.
-   
-2. Desde la raíz del proyecto, dirígete al directorio resemble/
-   
-   ```bash
-   cd resemble/
-   
-3. Instala las dependencias usando el campos de npm install (esto se hace la primera vez que se va a ejecutar las pruebas)
-   
-   ```bash
-   npm install
-
-4. Instala las dependencias usando el campos de npm install (esto se hace la primera vez que se va a ejecutar las pruebas)
-   
-   ```bash
-   npm install
-
-5. Resemble usa la libreria de canvas para la ejecución de pruebas, asegurate de tener instalada esta librería
-   
-   ```bash
-   npm install canvas
-
-6. Ejecuta las pruebas ejecutando el script
-   
-   ```bash
-   node index.js
-
-7. El script generara el reporte con los resultados de la prueba, el cual podrias verificar en results/
-
-   <img width="1464" alt="Screenshot 2024-11-16 at 6 29 58 PM" src="https://github.com/user-attachments/assets/d5012cdf-5404-4be0-9980-d9f9a4c1849a">
-
+4. Crea el usuario inicial (si corresponde).
 
 ## Instalacion de Cypress
-1. Clona el repositorio donde se encuentran los escenarios de prueba
+
+1. Dirígete al directorio random-data-test/test-cypress/
    
    ```bash
-   git clone https://github.com/danisanchezag2/e2e_test_kraken_cypress.git
-
-2. En la raíz del proyect, ejecuta el comando de docker para crear/iniciar los contenedores de las version 4.5 y 5.96.0 de Ghost.
-   
-   ```bash
-   docker-compose up
-   
-3. Verifica que las versiones instaladas estan corriendo correctamente.
-   
-   Para Ghost 4.5 corre sobre el puerto 2371
-   <img width="902" alt="Screenshot 2024-11-16 at 1 05 12 PM" src="https://github.com/user-attachments/assets/a7f2ab0a-e00d-477a-8054-0dc6be13db7f">
-
-   Para Ghost 5.96.0 corre sobre el puerto 2370
-   <img width="722" alt="Screenshot 2024-11-16 at 1 05 57 PM" src="https://github.com/user-attachments/assets/9c123f4c-8076-4468-b8f2-765a91b237c1">
-
-4. Crea el usuario inicial en cada una de las versiones (si corresponde).
-
-5. Dirígete al directorio test-cypress/ ya sea dentro de la carpeta ghost4.5 ó ghost5.96.0
-   
-   ```bash
-   cd ghost4.5/test-cypress/
-   cd ghost5.96.0/test-cypress/
+   cd random-data-test/test-cypress/
    
 6. Instala las dependencias necesarias usando el comando npm install
    
@@ -154,7 +52,7 @@ Despues de seguir los pasos anteriores, estamos listos para empezar a ejecutar n
    Ó ejecuta Cypress en modo headless
    
    ```bash
-   npm run start
+   npm run test
    ```
 
 ## Ejecucion de Cypress Interfaz
@@ -165,21 +63,52 @@ Cuando se corre npm run test, estaremos interactuando con la interfaz de cypress
 4. Ya allí podremos seleccionar las pruebas y ver su ejecución ![image](https://github.com/user-attachments/assets/0da7db4c-917f-46d2-b235-8a29fb5bd2a4)
 
 
-## Ejecutar regresion con BackstopJS
-1. Genera las imágenes de referencia usando el siguiente comando
-   ```bash
-      npx backstop reference
-2. Ejecuta las pruebas de regresión visual con BackstopJS usando el siguiente comando:
-   ```bash
-      npx backstop test
+## Estrategias de Generación de Datos para Pruebas
 
-3. Si deseas actualizar las imágenes de referencia, ejecuta el siguiente comando:
-   ```bash
-      npx backstop approve
+Para realizar pruebas sobre la Aplicación Base de Pruebas (ABP), se usaron tres estrategias de generación de datos, que se integran de la siguiente manera en los escenarios de prueba:
 
-4. Para ejecutar las pruebas de regresión visual en un entorno remoto, usa el siguiente comando:
-   ```bash
-      npx backstop remote
+### 1. Generación de Datos A-priori
+- **Descripción:** Se utiliza un conjunto de datos predefinido, almacenado en archivos como JSON, arrays o bases de datos. Estos datos se preparan antes de ejecutar las pruebas y representan casos específicos y predecibles.
+- **Integración en escenarios de prueba:**  
+  - Útil para validar comportamientos esperados, como verificaciones de campos obligatorios o procesos con reglas estrictas.
+  - **Ejemplo:** Validar que etiquetas preexistentes en el sistema (e.g., "tag1", "tag2") funcionan correctamente.
+- **Archivo de pruebas:** `tags-a-priori.cy.js`
 
-5. Revisa el reporte generado en la carpeta backstop_data/html_report para ver los resultados de las pruebas.
+---
 
+### 2. Generación de Datos Pseudo-aleatorios Dinámicos
+- **Descripción:** Se generan datos basados en un conjunto real o consistente, pero con variaciones controladas para ampliar la cobertura de las pruebas.
+- **Integración en escenarios de prueba:**  
+  - Útil para probar límites o variaciones dentro de un rango conocido.
+  - **Ejemplo:** Crear etiquetas con base en plantillas existentes, modificando campos como el nombre o atributos secundarios.
+- **Archivo de pruebas:** `tags-pseudo.cy.js`
+
+---
+
+### 3. Generación de Datos Completamente Aleatorios
+- **Descripción:** Se generan datos sin relación con información previa, asegurando una alta variabilidad. Esto permite explorar comportamientos inesperadosdel sistema.
+- **Integración en escenarios de prueba:**  
+  - Útil para escenarios de estrés o prueba de límites, verificando cómo responde el sistema ante datos no anticipados.
+  - **Ejemplo:** Crear etiquetas con nombres completamente aleatorios para probar entradas atípicas.
+- **Archivo de pruebas:** `tags-random.cy.js`
+
+---
+
+### Organización
+Los nombres de los archivos de prueba reflejan claramente la estrategia utilizada, facilitando su identificación y ejecución:
+```bash
+   tags-a-priori.cy.js
+   tags-pseudo.cy.js
+   tags-random.cy.js
+   ```
+
+## Incidencias reportadas con base las pruebas de este release
+* [Issue 15](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/15)
+* [Issue 14](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/14)
+* [Issue 13](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/13)
+* [Issue 12](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/12)
+* [Issue 11](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/11)
+* [Issue 10](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/10)
+* [Issue 9](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/9)
+* [Issue 16](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/16)
+* [Issue 17](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/17)
