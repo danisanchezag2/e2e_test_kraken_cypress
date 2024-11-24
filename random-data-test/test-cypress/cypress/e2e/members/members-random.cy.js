@@ -2,7 +2,7 @@ const { screenshot } = require('../../support/utils');
 const { MembersPage } = require("../page_objects/members-page");
 import { faker } from '@faker-js/faker';
 
-describe('Members', () => {
+describe('Members - Random', () => {
     const member = new MembersPage();
     
     beforeEach(() => {

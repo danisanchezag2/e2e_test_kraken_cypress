@@ -3,15 +3,15 @@ const { MembersPage } = require("../page_objects/members-page");
 const users = require('../../fixtures/users.json');
 const wrongEmails = require('../../fixtures/wrong-emails.json');
 
-describe('Members', () => {
+describe('Members - Pseudorandom', () => {
 
     const member = new MembersPage();
     const names = ["Alice", "Bob", "Charlie", "David", "Ella", "Olivia"];
     const emailConsecutive = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     const descriptions = [
-    "creative thinker", "problem solver", "team player", "detail-oriented", "self-starter",
-    "strong communicator", "adaptable", "strategic planner", "data-driven", "goal-oriented",
-    "innovative", "dependable", "collaborative"
+        "creative thinker", "problem solver", "team player", "detail-oriented", "self-starter",
+        "strong communicator", "adaptable", "strategic planner", "data-driven", "goal-oriented",
+        "innovative", "dependable", "collaborative"
     ];
     
     beforeEach(() => {
