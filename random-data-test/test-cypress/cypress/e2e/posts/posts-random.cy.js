@@ -12,163 +12,172 @@ describe('Random Data Generated Tests', () => {
     for (let index = 0; index < 2; index++) {
       const randomTitle = faker.lorem.sentence();
       const randomDescription = faker.lorem.paragraph();
-      // Navegar a la página de posts
+      // When I navigate to the posts page
       postsPage.navigateToPosts();
 
-      // Hacer clic en el botón de nuevo post
+      // And I click the new post button
       postsPage.clickNewPostButton();
 
-      // Crear un nuevo post con título y descripción
+      // And I create a new post with title and description
       postsPage.fillPostDetails(randomTitle, randomDescription);
       postsPage.clickPublishButton();
 
-      // Hacer clic en el botón Continuar, revisión final
+      // And I click on the button Continue, final review
       postsPage.clickContinuePublish();
       postsPage.clickConfirmPublish();
+      
+      // Then I should see the new post in the list
       postsPage.verifyPostExists(randomTitle);
     }
   });
 
-  it('should create multiple posts with random data title,content and image', () => {
+  it('should create multiple posts with random data title, content and image', () => {
     for (let index = 0; index < 2; index++) {
         const randomTitle = faker.lorem.sentence();
         const randomDescription = faker.lorem.paragraph();
         const randomImg = faker.image.avatar();
-        // Navegar a la página de posts
+        // When I navigate to the posts page
         postsPage.navigateToPosts();
 
-        // Hacer clic en el botón de nuevo post
+        // And I click the new post button
         postsPage.clickNewPostButton();
 
-        // Crear un nuevo post con título y descripción
+        // And I create a new post with title and description
         postsPage.fillPostDetails(randomTitle, randomDescription);
-        // Añadir imagen al post
+        // And I add an image to the post
         postsPage.addImage(randomImg);
         postsPage.clickPublishButton();
 
-        // Hacer clic en el botón Continuar, revisión final
+        // And I click on the button Continue, final review
         postsPage.clickContinuePublish();
         postsPage.clickConfirmPublish();
+        
+        // Then I should see the new post in the list
         postsPage.verifyPostExists(randomTitle);
     }
   });
 
-  it('should create multiple posts with random data title,content and youtube link malformatted', () => {
+  it('should create multiple posts with random data title, content and malformatted YouTube link', () => {
     for (let index = 0; index < 2; index++) {
         const randomTitle = faker.lorem.sentence();
         const randomDescription = faker.lorem.paragraph();
         const randomYoutube = `https://www.youtube.com/watch?v=${faker.word.adjective()}`;
-        // Navegar a la página de posts
+        // When I navigate to the posts page
         postsPage.navigateToPosts();
 
-        // Hacer clic en el botón de nuevo post
+        // And I click the new post button
         postsPage.clickNewPostButton();
 
-        // Crear un nuevo post con título y descripción
+        // And I create a new post with title and description
         postsPage.fillPostDetails(randomTitle, randomDescription);
-        // Añadir youtube link al post
+        // And I add a YouTube link to the post
         postsPage.addYoutube(randomYoutube);
-        // Verificar error con link de youtube
+        
+        // Then I should see an error with the YouTube link
         postsPage.verifyUrlErrorVisible();
     }
   });
 
-  it('should create multiple posts with random data title,content and youtube link', () => {
+  it('should create multiple posts with random data title, content and YouTube link', () => {
     for (let index = 0; index < 2; index++) {
         const randomTitle = faker.lorem.sentence();
         const randomDescription = faker.lorem.paragraph();
         const randomYoutube = generateYoutubeUrl();
-        // Navegar a la página de posts
+        // When I navigate to the posts page
         postsPage.navigateToPosts();
 
-        // Hacer clic en el botón de nuevo post
+        // And I click the new post button
         postsPage.clickNewPostButton();
 
-        // Crear un nuevo post con título y descripción
+        // And I create a new post with title and description
         postsPage.fillPostDetails(randomTitle, randomDescription);
-        // Añadir youtube link al post
+        // And I add a YouTube link to the post
         postsPage.addYoutube(randomYoutube.url);
-        // Hacer clic en el botón de publicar
+        // And I click the publish button
         postsPage.clickPublishButton();
 
-        // Hacer clic en el botón Continuar, revisión final
+        // And I click on the button Continue, final review
         postsPage.clickContinuePublish();
         postsPage.clickConfirmPublish();
-        postsPage.verifyPostExists(postTitle);
+        
+        // Then I should see the new post in the list
+        postsPage.verifyPostExists(randomTitle);
     }
   });
 
-  it('should create multiple posts with random data title,content and spotify track', () => {
+  it('should create multiple posts with random data title, content and Spotify track', () => {
     for (let index = 0; index < 2; index++) {
         const randomTitle = faker.lorem.sentence();
         const randomDescription = faker.lorem.paragraph();
         const randomSpotify = generateSpotifyUrl();
-        // Navegar a la página de posts
+        // When I navigate to the posts page
         postsPage.navigateToPosts();
 
-        // Hacer clic en el botón de nuevo post
+        // And I click the new post button
         postsPage.clickNewPostButton();
 
-        // Crear un nuevo post con título y descripción
+        // And I create a new post with title and description
         postsPage.fillPostDetails(randomTitle, randomDescription);
-        // Añadir spotify link al post
+        // And I add a Spotify link to the post
         postsPage.addSpotify(randomSpotify.url);
-        // Hacer clic en el botón de publicar
+        // And I click the publish button
         postsPage.clickPublishButton();
 
-        // Hacer clic en el botón Continuar, revisión final
+        // And I click on the button Continue, final review
         postsPage.clickContinuePublish();
         postsPage.clickConfirmPublish();
-        postsPage.verifyPostExists(postTitle);
+        
+        // Then I should see the new post in the list
+        postsPage.verifyPostExists(randomTitle);
     }
   });
 
-  it('should create multiple posts with random data title,content and malformatted spotify track', () => {
+  it('should create multiple posts with random data title, content and malformatted Spotify track', () => {
     for (let index = 0; index < 2; index++) {
         const randomTitle = faker.lorem.sentence();
         const randomDescription = faker.lorem.paragraph();
         const randomSpotify = `https://open.spotify.com/track/${faker.word.adjective()}`;
-        // Navegar a la página de posts
+        // When I navigate to the posts page
         postsPage.navigateToPosts();
 
-        // Hacer clic en el botón de nuevo post
+        // And I click the new post button
         postsPage.clickNewPostButton();
 
-        // Crear un nuevo post con título y descripción
+        // And I create a new post with title and description
         postsPage.fillPostDetails(randomTitle, randomDescription);
-        // Añadir spotify link al post
+        // And I add a Spotify link to the post
         postsPage.addSpotify(randomSpotify);
-        // Verificar error con link de youtube
+        
+        // Then I should see an error with the Spotify link
         postsPage.verifyUrlErrorVisible();
     }
   });
 
-  it('should create multiple posts with random data title,content, youtube track and spotify track', () => {
+  it('should create multiple posts with random data title, content, YouTube track and Spotify track', () => {
     for (let index = 0; index < 2; index++) {
         const randomTitle = faker.lorem.sentence();
         const randomDescription = faker.lorem.paragraph();
         const randomSpotify = generateSpotifyUrl();
         const randomYoutube = generateYoutubeUrl();
-      // Navegar a la página de posts
-      postsPage.navigateToPosts();
+        // When I navigate to the posts page
+        postsPage.navigateToPosts();
 
-      // Hacer clic en el botón de nuevo post
-      postsPage.clickNewPostButton();
+        // And I click the new post button
+        postsPage.clickNewPostButton();
 
-      // Crear un nuevo post con título y descripción
-      postsPage.fillPostDetails(randomTitle, randomDescription);
-      // Añadir spotifyUrl
-      const spotifyUrl = generateSpotifyUrl();
-      const youtubeUrl = generateYoutubeUrl();
-      // Añadir youtube y spotify al post
-      postsPage.addYoutubeAndSpotifyUrls(randomYoutube.url, randomSpotify.url);
-      // Hacer clic en el botón de publicar
-      postsPage.clickPublishButton();
+        // And I create a new post with title and description
+        postsPage.fillPostDetails(randomTitle, randomDescription);
+        // And I add YouTube and Spotify links to the post
+        postsPage.addYoutubeAndSpotifyUrls(randomYoutube.url, randomSpotify.url);
+        // And I click the publish button
+        postsPage.clickPublishButton();
 
-      // Hacer clic en el botón Continuar, revisión final
-      postsPage.clickContinuePublish();
-      postsPage.clickConfirmPublish();
-      postsPage.verifyPostExists(randomTitle);
+        // And I click on the button Continue, final review
+        postsPage.clickContinuePublish();
+        postsPage.clickConfirmPublish();
+        
+        // Then I should see the new post in the list
+        postsPage.verifyPostExists(randomTitle);
     }
   });
 

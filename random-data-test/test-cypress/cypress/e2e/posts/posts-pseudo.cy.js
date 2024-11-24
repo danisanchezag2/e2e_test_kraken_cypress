@@ -9,161 +9,160 @@ describe('Pseudo Data Generated Tests', () => {
     });
 
   it('should create multiple posts with pseudo data title and content', () => {
-    const posts = generateRandomPosts(3); // Generar 3 posts aleatorios
+    const posts = generateRandomPosts(3); // Generate 3 random posts
 
     posts.forEach((post, index) => {
-      // Navegar a la página de posts
+      // When I navigate to the posts page
       postsPage.navigateToPosts();
 
-      // Hacer clic en el botón de nuevo post
+      // And I click the new post button
       postsPage.clickNewPostButton();
 
-      // Crear un nuevo post con título y descripción
+      // And I create a new post with title and description
       postsPage.fillPostDetails(post.title, post.content);
       postsPage.clickPublishButton();
 
-      // Hacer clic en el botón Continuar, revisión final
+      // And I click on the button Continue, final review
       postsPage.clickContinuePublish();
       postsPage.clickConfirmPublish();
       postsPage.verifyPostExists(post.title);
     });
   });
 
-  it('should create multiple posts with pseudo data title,content and image', () => {
-    const posts = generateRandomPosts(3); // Generar 3 posts aleatorios
+  it('should create multiple posts with pseudo data title, content and image', () => {
+    const posts = generateRandomPosts(3); // Generate 3 random posts
 
     posts.forEach((post, index) => {
-      // Navegar a la página de posts
+      // When I navigate to the posts page
       postsPage.navigateToPosts();
 
-      // Hacer clic en el botón de nuevo post
+      // And I click the new post button
       postsPage.clickNewPostButton();
 
-      // Crear un nuevo post con título y descripción
+      // And I create a new post with title and description
       postsPage.fillPostDetails(post.title, post.content);
-      // Añadir imagen al post
+      // And I add an image to the post
       postsPage.addImage(post.image);
-      // Hacer clic en el botón de publicar
+      // And I click the publish button
       postsPage.clickPublishButton();
 
-      // Hacer clic en el botón Continuar, revisión final
+      // And I click on the button Continue, final review
       postsPage.clickContinuePublish();
       postsPage.clickConfirmPublish();
       postsPage.verifyPostExists(post.title);
     });
   });
 
-  it('should create multiple posts with pseudo data title,content and youtube link malformatted', () => {
-    const posts = generateRandomPosts(1); // Generar un post aleatorio
+  it('should create multiple posts with pseudo data title, content and malformatted YouTube link', () => {
+    const posts = generateRandomPosts(1); // Generate 1 random post
     posts.forEach((post, index) => {
-      // Navegar a la página de posts
+      // When I navigate to the posts page
       postsPage.navigateToPosts();
 
-      // Hacer clic en el botón de nuevo post
+      // And I click the new post button
       postsPage.clickNewPostButton();
 
-      // Crear un nuevo post con título y descripción
+      // And I create a new post with title and description
       postsPage.fillPostDetails(post.title, post.content);
-      // Añadir youtube malformado al post
+      // And I add a malformatted YouTube link to the post
       const youtubeUrl = generateMalformatedYoutubeUrl();
       postsPage.addYoutube(youtubeUrl);
-      // Verificar error con link de youtube
+      // Verify error with YouTube link
       postsPage.verifyUrlErrorVisible();
     });
 
   });
 
-  it('should create multiple posts with pseudo data title,content and youtube link', () => {
-    const posts = generateRandomPosts(2); // Generar 2 posts aleatorios
+  it('should create multiple posts with pseudo data title, content and YouTube link', () => {
+    const posts = generateRandomPosts(2); // Generate 2 random posts
 
     posts.forEach((post, index) => {
-      // Navegar a la página de posts
+      // When I navigate to the posts page
       postsPage.navigateToPosts();
 
-      // Hacer clic en el botón de nuevo post
+      // And I click the new post button
       postsPage.clickNewPostButton();
 
-      // Crear un nuevo post con título y descripción
+      // And I create a new post with title and description
       postsPage.fillPostDetails(post.title, post.content);
-      // Añadir imagen al post
+      // And I add a YouTube link to the post
       const youtubeUrl = generateYoutubeUrl();
       postsPage.addYoutube(youtubeUrl.url);
-      // Hacer clic en el botón de publicar
+      // And I click the publish button
       postsPage.clickPublishButton();
 
-      // Hacer clic en el botón Continuar, revisión final
+      // And I click on the button Continue, final review
       postsPage.clickContinuePublish();
       postsPage.clickConfirmPublish();
       postsPage.verifyPostExists(post.title);
     });  
   });
 
-  it('should create multiple posts with pseudo data title,content and spotify track', () => {
-    const posts = generateRandomPosts(2); // Generar 2 posts aleatorios
+  it('should create multiple posts with pseudo data title, content and Spotify track', () => {
+    const posts = generateRandomPosts(2); // Generate 2 random posts
 
     posts.forEach((post, index) => {
-      // Navegar a la página de posts
+      // When I navigate to the posts page
       postsPage.navigateToPosts();
 
-      // Hacer clic en el botón de nuevo post
+      // And I click the new post button
       postsPage.clickNewPostButton();
 
-      // Crear un nuevo post con título y descripción
+      // And I create a new post with title and description
       postsPage.fillPostDetails(post.title, post.content);
-      // Añadir spotifyUrl
+      // And I add a Spotify link to the post
       const spotifyUrl = generateSpotifyUrl();
       postsPage.addSpotify(spotifyUrl.url);
-      // Hacer clic en el botón de publicar
+      // And I click the publish button
       postsPage.clickPublishButton();
 
-      // Hacer clic en el botón Continuar, revisión final
+      // And I click on the button Continue, final review
       postsPage.clickContinuePublish();
       postsPage.clickConfirmPublish();
       postsPage.verifyPostExists(post.title);
     });  
   });
 
-  it('should create multiple posts with pseudo data title,content and malformatted spotify track', () => {
-    const posts = generateRandomPosts(1); // Generar 5 posts aleatorios
+  it('should create multiple posts with pseudo data title, content and malformatted Spotify track', () => {
+    const posts = generateRandomPosts(1); // Generate 1 random post
     posts.forEach((post, index) => {
-      // Navegar a la página de posts
+      // When I navigate to the posts page
       postsPage.navigateToPosts();
 
-      // Hacer clic en el botón de nuevo post
+      // And I click the new post button
       postsPage.clickNewPostButton();
 
-      // Crear un nuevo post con título y descripción
+      // And I create a new post with title and description
       postsPage.fillPostDetails(post.title, post.content);
-      // Añadir spotify malformado al post
+      // And I add a malformatted Spotify link to the post
       const spotifyUrl = generateMalformatedSpotifyUrl();
       postsPage.addSpotify(spotifyUrl.url);
-      // Verificar error con link de youtube
+      // Verify error with Spotify link
       postsPage.verifyUrlErrorVisible();
     });
 
   });
 
-  it('should create multiple posts with pseudo data title,content, youtube track and spotify track', () => {
-    const posts = generateRandomPosts(2); // Generar 2 posts aleatorios
+  it('should create multiple posts with pseudo data title, content, YouTube track and Spotify track', () => {
+    const posts = generateRandomPosts(2); // Generate 2 random posts
 
     posts.forEach((post, index) => {
-      // Navegar a la página de posts
+      // When I navigate to the posts page
       postsPage.navigateToPosts();
 
-      // Hacer clic en el botón de nuevo post
+      // And I click the new post button
       postsPage.clickNewPostButton();
 
-      // Crear un nuevo post con título y descripción
+      // And I create a new post with title and description
       postsPage.fillPostDetails(post.title, post.content);
-      // Añadir spotifyUrl
+      // And I add YouTube and Spotify links to the post
       const spotifyUrl = generateSpotifyUrl();
       const youtubeUrl = generateYoutubeUrl();
-      // Añadir youtube y spotify al post
       postsPage.addYoutubeAndSpotifyUrls(youtubeUrl.url, spotifyUrl.url);
-      // Hacer clic en el botón de publicar
+      // And I click the publish button
       postsPage.clickPublishButton();
 
-      // Hacer clic en el botón Continuar, revisión final
+      // And I click on the button Continue, final review
       postsPage.clickContinuePublish();
       postsPage.clickConfirmPublish();
       postsPage.verifyPostExists(post.title);

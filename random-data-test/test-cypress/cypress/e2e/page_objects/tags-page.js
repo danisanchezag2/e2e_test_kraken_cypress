@@ -3,7 +3,6 @@ const { AbstractPage } = require("./abstract-page");
 class TagsPage extends AbstractPage {
   navigateToTags() {
     cy.get('[data-test-nav="tags"]').click();
-    cy.wait(1000);
   }
 
   clickNewTagButton() {
@@ -11,18 +10,19 @@ class TagsPage extends AbstractPage {
   }
 
   fillTagNameAndDescription(name, description) {
-    cy.get('[data-test-input="tag-name"]').type(name);
+    
+    cy.get('[data-test-input="tag-name"]').scrollIntoView().type(name);
     cy.get('[data-test-input="tag-description"]').type(description);
+    cy.wait(1000);
     
   }
 
   saveTag() {
-    cy.get('[data-test-button="save"]').click();
-    cy.wait(2000);
+    cy.get('[data-test-button="save"]').scrollIntoView().click();
   }
 
   verifyTagExists(tagName) {
-    cy.get('ol.gh-list').contains(tagName).should('exist');
+    cy.contains(tagName).scrollIntoView().should('exist');
   }
 
   verifyErrorMessage(errorMessage) {

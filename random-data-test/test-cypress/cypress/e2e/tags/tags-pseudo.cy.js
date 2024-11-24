@@ -62,7 +62,7 @@ describe('Tags pseudo Data Generated Tests', () => {
       it('Create a new tag with name and description with more than 500 characters', function() {
         tagsDataSetMoreThan500.forEach((tag, index) => {
             const tagName =  tag.name;
-            const tagDescription = faker.lorem.paragraphs(4);
+            const tagDescription = faker.string.alpha(501);
           // When I go to the tags section
           tagsPage.navigateToTags();
       
