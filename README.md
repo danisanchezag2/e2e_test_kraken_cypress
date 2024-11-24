@@ -63,16 +63,39 @@ Cuando se corre npm run test, estaremos interactuando con la interfaz de cypress
 4. Ya allí podremos seleccionar las pruebas y ver su ejecución ![image](https://github.com/user-attachments/assets/0da7db4c-917f-46d2-b235-8a29fb5bd2a4)
 
 
-## Descripción de las tecnicas usadas para generación de datos en las pruebas
-Para estas pruebas se usaron 3 tipos de generación de datos para pruebas:
+## Estrategias de Generación de Datos para Pruebas
 
-**1. Generación de datos a-priori:** Esta tenica usa un set de datos previamente establecido (puede ser un json, array, etc) para ejecutar las pruebas sobre la ABP.
+Para realizar pruebas sobre la Aplicación Base de Pruebas (ABP), se usaron tres estrategias de generación de datos, que se integran de la siguiente manera en los escenarios de prueba:
 
-**2. Generación de datos pseudo-aleatorios:** Esta tenica genera datos con base en datos reales de la prueba, se puede decir que con base en un set de datos real o consistente, se pueden generar datos aleatorios para ejecutar las pruebas sobre la ABP.
+### 1. Generación de Datos A-priori
+- **Descripción:** Se utiliza un conjunto de datos predefinido, almacenado en archivos como JSON, arrays o bases de datos. Estos datos se preparan antes de ejecutar las pruebas y representan casos específicos y predecibles.
+- **Integración en escenarios de prueba:**  
+  - Útil para validar comportamientos esperados, como verificaciones de campos obligatorios o procesos con reglas estrictas.
+  - **Ejemplo:** Validar que etiquetas preexistentes en el sistema (e.g., "tag1", "tag2") funcionan correctamente.
+- **Archivo de pruebas:** `tags-a-priori.cy.js`
 
-**3. Generación de datos aleatorios:** Esta tecnica genera datos completamente aleatorios, de forma independiente para cada caso y cada campo.
+---
 
-Los nombres de los archivos que contienen las pruebas indican el tipo de prueba que se esta ejecutando sobre ese archivo, por ejemplo:
+### 2. Generación de Datos Pseudo-aleatorios Dinámicos
+- **Descripción:** Se generan datos basados en un conjunto real o consistente, pero con variaciones controladas para ampliar la cobertura de las pruebas.
+- **Integración en escenarios de prueba:**  
+  - Útil para probar límites o variaciones dentro de un rango conocido.
+  - **Ejemplo:** Crear etiquetas con base en plantillas existentes, modificando campos como el nombre o atributos secundarios.
+- **Archivo de pruebas:** `tags-pseudo.cy.js`
+
+---
+
+### 3. Generación de Datos Completamente Aleatorios
+- **Descripción:** Se generan datos sin relación con información previa, asegurando una alta variabilidad. Esto permite explorar comportamientos inesperadosdel sistema.
+- **Integración en escenarios de prueba:**  
+  - Útil para escenarios de estrés o prueba de límites, verificando cómo responde el sistema ante datos no anticipados.
+  - **Ejemplo:** Crear etiquetas con nombres completamente aleatorios para probar entradas atípicas.
+- **Archivo de pruebas:** `tags-random.cy.js`
+
+---
+
+### Organización
+Los nombres de los archivos de prueba reflejan claramente la estrategia utilizada, facilitando su identificación y ejecución:
 ```bash
    tags-a-priori.cy.js
    tags-pseudo.cy.js
