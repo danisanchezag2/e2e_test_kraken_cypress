@@ -210,4 +210,5 @@ En esta sección se relaciona el inventario de las pruebas manuales realizadas, 
 ## Artefactos
 1. [Estrategia de pruebas](https://uniandes-my.sharepoint.com/:w:/g/personal/d_sancheza2_uniandes_edu_co/EeLCGyLyLaRFmyRurVvZkAQB0QD5y61elHUnlgh8wBNCFg?e=heHnli)
 2. [Diagrama de Gantt de la estrategia](https://uniandes-my.sharepoint.com/:x:/r/personal/d_sancheza2_uniandes_edu_co/Documents/Diagrama%20de%20Gantt%20simple%20.xlsx?d=w372b7ab1473740688958f51b1538148b&csf=1&web=1&e=Rr2QuU)
-3. Video
+3. [Inventario de pruebas manuales](https://uniandes-my.sharepoint.com/:x:/g/personal/d_sancheza2_uniandes_edu_co/EWTWbWaJ4ohKu3fdcUEG1FYBR9E-DNOCX0mkQq582HQ9eA?e=fQMyIr)
+4. [Video de estrategia](https://uniandes-my.sharepoint.com/:v:/g/personal/o_torress_uniandes_edu_co/EUmrm9gJkLVDg0GqDbASUIwBG1PPkCiQMiPJRxdEgVv2bg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=BRbXp7)
