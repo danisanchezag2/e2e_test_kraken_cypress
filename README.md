@@ -9,9 +9,8 @@
 
 ## Requisitos 
 1. Docker
-2. Cypress
-3. Node v20.12.2
-4. kraken-node
+2. Node v20.12.2
+3. NPM 10.9.0
 
 ## Instalación de Ghost usando Docker
 1. Clona el repositorio del proyecto.
@@ -31,19 +30,40 @@
 
 4. Crea el usuario inicial (si corresponde).
 
-## Instalacion de Cypress
-
-1. Dirígete al directorio random-data-test/test-cypress/
+## Configuracióno y ejecución de GUI Ripping usando RIPuppet
+1. Desde la raíz del proyecto, dirígete al directorio pruebas_exploratorias/RIPuppetCoursera
    
    ```bash
-   cd random-data-test/test-cypress/
+   cd pruebas_exploratorias/RIPuppetCoursera/
    
-6. Instala las dependencias necesarias usando el comando npm install
+2. Instala las dependencias necesarias usando el comando npm install
    
    ```bash
    npm install
+
+3. Abre el archivo config.json y asegurate de tener la configuración deseada antes de la ejecución
    
-7. Ejecuta Cypress en modo interactivo
+<img width="502" alt="Screenshot 2024-11-30 at 12 20 04 AM" src="https://github.com/user-attachments/assets/e18f19ac-08f2-47ef-b5f8-10769af784ad">
+
+4. Ejecuta la herramienta para correr el ripper
+   
+   ```bash
+   node index.js
+
+Para mas información, puedes remitirte al repositorio de la herramienta dando click [aqui]( https://github.com/TheSoftwareDesignLab/RIPuppetCoursera)
+
+## Configuración y ejecución de pruebas E2E con Cypress
+1. Desde la raíz del proyecto, dirígete al directorio pruebas_e2e/test-cypress
+   
+   ```bash
+   cd pruebas_e2e/test-cypress/
+   
+2. Instala las dependencias necesarias usando el comando npm install
+   
+   ```bash
+   npm install
+
+3. Ejecuta Cypress en modo interactivo
    
    ```bash
    npm run start
@@ -55,15 +75,103 @@
    npm run test
    ```
 
-## Ejecucion de Cypress Interfaz
-Cuando se corre npm run test, estaremos interactuando con la interfaz de cypress
-1. Al abrir la interfaz Hacer click en Add Project y buscar la carpeta cypress de este repositorio, donde esta ubicado el archivo cypress.config.js.
-2. Seleccionar las pruebas e2e ![image](https://github.com/user-attachments/assets/8d8e1923-345e-4d78-87a9-be14f720da08)
-3. Seleccionar un navegador para la ejecución y hacer click en start ![image](https://github.com/user-attachments/assets/f1d45e5e-e4b1-4ae1-be38-2933382b9a55)
-4. Ya allí podremos seleccionar las pruebas y ver su ejecución ![image](https://github.com/user-attachments/assets/0da7db4c-917f-46d2-b235-8a29fb5bd2a4)
+## Configuración y ejecución de pruebas E2E con Kraken
+1. Desde la raíz del proyecto, dirígete al directorio pruebas_e2e/test-cypress
+   
+   ```bash
+   cd pruebas_e2e/kraken/
+   
+2. Instala las dependencias necesarias usando el comando npm install
+   
+   ```bash
+   npm install
+   
+3. Ejecuta el comando de diagnóstico para verificar que todas las dependencias del sistema están instaladas correctamente
+   
+   ```bash
+   npx kraken-node doctor
+   
+4. Si el diagnóstico encuentra problemas, instala las dependencias faltantes según las recomendaciones. Esto puede incluir instalar controladores de dispositivos o configuraciones específicas del sistema.
+   
+5. Configura las variables de entorno necesarias (si corresponde), como credenciales o configuraciones del entorno de pruebas. Para más información puedes consultar el repositorio del proyecto Kraken: https://thesoftwaredesignlab.github.io/Kraken/
 
+6. Ejecuta el comando npx kraken-node run
+   
+   ```bash
+   npx kraken-node run
+   ```
 
-## Estrategias de Generación de Datos para Pruebas
+   Deberás ver algo similar a estos print:
+   
+   <img width="1459" alt="Screenshot 2024-11-09 at 11 34 07 PM" src="https://github.com/user-attachments/assets/e55ded91-fed9-49c5-9203-3ad90186db55">
+   
+   <img width="1468" alt="Screenshot 2024-11-09 at 11 34 42 PM" src="https://github.com/user-attachments/assets/3606c7c0-e1bf-4da3-8786-bb4f2965fb8f">
+
+## Configuración y ejecución de pruebas VRT con ResembleJS
+
+1. Repite los pasos anteriores ([configuración de cypress](https://github.com/danisanchezag2/e2e_test_kraken_cypress/edit/main/README.md#configuraci%C3%B3n-y-ejecuci%C3%B3n-de-pruebas-e2e-con-cypress) y [configuración de kraken](https://github.com/danisanchezag2/e2e_test_kraken_cypress/edit/main/README.md#configuraci%C3%B3n-y-ejecuci%C3%B3n-de-pruebas-e2e-con-cypress)) pero desde la carpeta pruebas_vrt desde la raíz
+   
+   ```bash
+   cd pruebas_vrt/
+   ```
+2. Luego de haber ejecutado las pruebas para cada version de Ghost, dirígete al directorio resemble/
+   
+   ```bash
+   cd pruebas_vrt/resemble/
+   
+3. Instala las dependencias usando el campos de npm install (esto se hace la primera vez que se va a ejecutar las pruebas)
+   
+   ```bash
+   npm install
+
+4. Resemble usa la libreria de canvas para la ejecución de pruebas, asegurate de tener instalada esta librería
+   
+   ```bash
+   npm install canvas
+
+5. Ejecuta las pruebas ejecutando el script
+   
+   ```bash
+   node index.js
+
+6. El script generara el reporte con los resultados de la prueba, el cual podrias verificar en results/
+
+   <img width="1464" alt="Screenshot 2024-11-16 at 6 29 58 PM" src="https://github.com/user-attachments/assets/d5012cdf-5404-4be0-9980-d9f9a4c1849a">
+
+## Configuración y ejecución de pruebas VRT con BackstopJS
+
+1. Repite los pasos anteriores ([configuración de cypress](https://github.com/danisanchezag2/e2e_test_kraken_cypress/edit/main/README.md#configuraci%C3%B3n-y-ejecuci%C3%B3n-de-pruebas-e2e-con-cypress) y [configuración de kraken](https://github.com/danisanchezag2/e2e_test_kraken_cypress/edit/main/README.md#configuraci%C3%B3n-y-ejecuci%C3%B3n-de-pruebas-e2e-con-cypress)) pero desde la carpeta pruebas_vrt desde la raíz
+   
+   ```bash
+   cd pruebas_vrt/
+   ```
+   
+2. Genera las imágenes de referencia usando el siguiente comando
+   ```bash
+      npx backstop reference
+3. Ejecuta las pruebas de regresión visual con BackstopJS usando el siguiente comando:
+   ```bash
+      npx backstop test
+
+4. Si deseas actualizar las imágenes de referencia, ejecuta el siguiente comando:
+   ```bash
+      npx backstop approve
+
+5. Para ejecutar las pruebas de regresión visual en un entorno remoto, usa el siguiente comando:
+   ```bash
+      npx backstop remote
+
+6. Revisa el reporte generado en la carpeta pruebas_vrt/backstop_data/html_report para ver los resultados de las pruebas.
+   
+
+## Configuración y ejecución de pruebas de validación de datos
+1. Repite los pasos anteriores ([configuración de cypress](https://github.com/danisanchezag2/e2e_test_kraken_cypress/edit/main/README.md#configuraci%C3%B3n-y-ejecuci%C3%B3n-de-pruebas-e2e-con-cypress)) pero desde la carpeta validacion_datos desde la raíz
+   
+   ```bash
+   cd validacion_datos/
+   ```
+
+### Estrategias de Generación de Datos para Pruebas
 
 Para realizar pruebas sobre la Aplicación Base de Pruebas (ABP), se usaron tres estrategias de generación de datos, que se integran de la siguiente manera en los escenarios de prueba:
 
@@ -74,8 +182,6 @@ Para realizar pruebas sobre la Aplicación Base de Pruebas (ABP), se usaron tres
   - **Ejemplo:** Validar que etiquetas preexistentes en el sistema (e.g., "tag1", "tag2") funcionan correctamente.
 - **Archivo de pruebas:** `tags-a-priori.cy.js`
 
----
-
 ### 2. Generación de Datos Pseudo-aleatorios Dinámicos
 - **Descripción:** Se generan datos basados en un conjunto real o consistente, pero con variaciones controladas para ampliar la cobertura de las pruebas.
 - **Integración en escenarios de prueba:**  
@@ -83,16 +189,12 @@ Para realizar pruebas sobre la Aplicación Base de Pruebas (ABP), se usaron tres
   - **Ejemplo:** Crear etiquetas con base en plantillas existentes, modificando campos como el nombre o atributos secundarios.
 - **Archivo de pruebas:** `tags-pseudo.cy.js`
 
----
-
 ### 3. Generación de Datos Completamente Aleatorios
 - **Descripción:** Se generan datos sin relación con información previa, asegurando una alta variabilidad. Esto permite explorar comportamientos inesperadosdel sistema.
 - **Integración en escenarios de prueba:**  
   - Útil para escenarios de estrés o prueba de límites, verificando cómo responde el sistema ante datos no anticipados.
   - **Ejemplo:** Crear etiquetas con nombres completamente aleatorios para probar entradas atípicas.
 - **Archivo de pruebas:** `tags-random.cy.js`
-
----
 
 ### Organización
 Los nombres de los archivos de prueba reflejan claramente la estrategia utilizada, facilitando su identificación y ejecución:
@@ -102,13 +204,10 @@ Los nombres de los archivos de prueba reflejan claramente la estrategia utilizad
    tags-random.cy.js
    ```
 
-## Incidencias reportadas con base las pruebas de este release
-* [Issue 15](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/15)
-* [Issue 14](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/14)
-* [Issue 13](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/13)
-* [Issue 12](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/12)
-* [Issue 11](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/11)
-* [Issue 10](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/10)
-* [Issue 9](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/9)
-* [Issue 16](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/16)
-* [Issue 17](https://github.com/danisanchezag2/e2e_test_kraken_cypress/issues/17)
+## Pruebas manuales
+En esta sección se relaciona el inventario de las pruebas manuales realizadas, click [aqui](https://uniandes-my.sharepoint.com/:x:/g/personal/d_sancheza2_uniandes_edu_co/EWTWbWaJ4ohKu3fdcUEG1FYBR9E-DNOCX0mkQq582HQ9eA?e=fQMyIr) para ir al documento.
+
+## Artefactos
+1. [Estrategia de pruebas](https://uniandes-my.sharepoint.com/:w:/g/personal/d_sancheza2_uniandes_edu_co/EeLCGyLyLaRFmyRurVvZkAQB0QD5y61elHUnlgh8wBNCFg?e=heHnli)
+2. [Diagrama de Gantt de la estrategia](https://uniandes-my.sharepoint.com/:x:/r/personal/d_sancheza2_uniandes_edu_co/Documents/Diagrama%20de%20Gantt%20simple%20.xlsx?d=w372b7ab1473740688958f51b1538148b&csf=1&web=1&e=Rr2QuU)
+3. Video
