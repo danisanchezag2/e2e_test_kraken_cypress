@@ -2,9 +2,12 @@
 
 node_modules
 
-ghost*/kraken/reports/*
-backstop_data/bitmaps_reference/*
-backstop_data/bitmaps_test/*
+pruebas_e2e/kraken/reports/*
+pruebas_e2e/kraken-screenshots/*
+pruebas_e2e/test-cypress/cypress/screenshots/*
+pruebas_vrt/ghost*/kraken/reports/*
+pruebas_vrt/backstop_data/bitmaps_reference/*
+pruebas_vrt/backstop_data/bitmaps_test/*
 
 
-resemble/results/*
+pruebas_vrt/resemble/results/*
