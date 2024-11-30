@@ -30,7 +30,7 @@
 
 4. Crea el usuario inicial (si corresponde).
 
-## Configuracióno y ejecución de GUI Ripping usando RIPuppet
+## Configuración y ejecución de GUI Ripping usando RIPuppet
 1. Desde la raíz del proyecto, dirígete al directorio pruebas_exploratorias/RIPuppetCoursera
    
    ```bash
